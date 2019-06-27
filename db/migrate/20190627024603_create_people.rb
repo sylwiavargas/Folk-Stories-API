@@ -5,9 +5,8 @@ class CreatePeople < ActiveRecord::Migration[5.2]
       t.integer :death
       t.integer :birth
       t.string :bio
-      t.string :read_more
+      t.string :read_more, default: "-"
       t.string :language, default: "English"
-      t.string :status, default: 'user'
       t.timestamps
     end
   end
