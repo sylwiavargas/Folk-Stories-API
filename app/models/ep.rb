@@ -1,0 +1,2 @@
+class Ep < ApplicationRecord
+end
