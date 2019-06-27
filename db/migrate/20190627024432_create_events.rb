@@ -9,6 +9,7 @@ class CreateEvents < ActiveRecord::Migration[5.2]
       t.integer :day
       t.string :read_more, default: "-"
       t.string :language
+      t.boolean :published, default: false
       t.references :place, foreign_key: true, index: true, default: ""
       t.references :country, foreign_key: true, index: true
       t.timestamps

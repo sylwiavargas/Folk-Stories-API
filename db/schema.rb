@@ -75,6 +75,7 @@ ActiveRecord::Schema.define(version: 2019_06_27_225156) do
     t.integer "day"
     t.string "read_more", default: "-"
     t.string "language"
+    t.boolean "published", default: false
     t.bigint "place_id"
     t.bigint "country_id"
     t.datetime "created_at", null: false
@@ -90,6 +91,7 @@ ActiveRecord::Schema.define(version: 2019_06_27_225156) do
     t.string "bio"
     t.string "read_more", default: "-"
     t.string "language", default: "English"
+    t.boolean "published", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -106,7 +108,7 @@ ActiveRecord::Schema.define(version: 2019_06_27_225156) do
   end
 
   create_table "subscriptions", force: :cascade do |t|
-    t.string "CreateSubscriptions"
+    t.string "name"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

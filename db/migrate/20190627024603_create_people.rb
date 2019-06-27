@@ -7,6 +7,7 @@ class CreatePeople < ActiveRecord::Migration[5.2]
       t.string :bio
       t.string :read_more, default: "-"
       t.string :language, default: "English"
+      t.boolean :published, default: false
       t.timestamps
     end
   end
