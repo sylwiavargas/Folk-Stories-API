@@ -1,3 +1,3 @@
 class CpSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :country_id, :person_id
 end

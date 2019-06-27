@@ -4,4 +4,6 @@ class Type < ApplicationRecord
   has_many :events, :through => :ets
   has_many :tsus
   has_many :subscriptions, :through => :tsus
+
+  validates :name, presence: true
 end

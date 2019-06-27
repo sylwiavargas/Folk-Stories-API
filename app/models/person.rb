@@ -9,4 +9,8 @@ has_many :places, :through => :countries, :through => :cps
 has_many :eps
 has_many :events, :through => :eps
 
+validates :name, presence: true
+validates :death, presence: true
+validates :birth, presence: true
+validates :bio, presence: true
 end

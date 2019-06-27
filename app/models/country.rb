@@ -8,4 +8,7 @@ class Country < ApplicationRecord
   has_many :ets
   has_many :types, :through => :ets
 
+  validates :name, presence: true
+  validates :continent_id, presence: true
+
 end
