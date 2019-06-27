@@ -6,6 +6,7 @@ Rails.application.routes.draw do
      resources :countries#, only: [:index, :update]
      resources :eps#, only: [:index, :update]
      resources :ets#, only: [:index, :update]
+     resources :cps
      resources :events#, only: [:index, :update]
      resources :people#, only: [:index, :update]
      resources :subscriptions#, only: [:index, :update]

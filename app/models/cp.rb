@@ -1,0 +1,2 @@
+class Cp < ApplicationRecord
+end
