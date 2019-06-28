@@ -89,6 +89,8 @@ ActiveRecord::Schema.define(version: 2019_06_27_225156) do
     t.integer "death"
     t.integer "birth"
     t.string "bio"
+    t.string "picture"
+    t.string "quote"
     t.string "read_more", default: "-"
     t.string "language", default: "English"
     t.boolean "published", default: false
