@@ -11,11 +11,11 @@ class Api::V1::AuthController < ApplicationController
     end
   end
 
-  def reAuth
+  def reauth
     if current_user
       render json: current_user, status: :accepted
     else
-      render json: { errors: 'wat'}
+      render json: { errors:   'wat'}
     end
   end
 

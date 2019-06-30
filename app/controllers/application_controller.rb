@@ -10,13 +10,10 @@ class ApplicationController < ActionController::API
   end
 
   def decoded_token
-    if auth_header
-      token = auth_header.split(' ')[1]
       begin
-        JWT.decode(token, ENV['jwt_key'], true, algorithm: 'HS256')
+        JWT.decode(auth_header, ENV['jwt_key'])
       rescue JWT::DecodeError
         nil
-      end
     end
   end
 
