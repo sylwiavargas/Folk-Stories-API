@@ -7,7 +7,7 @@ class Place < ApplicationRecord
   has_many :ets, :through => :events
   has_many :types, :through => :ets
 
-  validates :name, presence: true
+  validates :name_eng, presence: true
   validates :latitude, presence: true
   validates :longitude, presence: true
 end

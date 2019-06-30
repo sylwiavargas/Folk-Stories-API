@@ -26,13 +26,15 @@ ActiveRecord::Schema.define(version: 2019_06_27_225156) do
   end
 
   create_table "continents", force: :cascade do |t|
-    t.string "name"
+    t.string "name_eng"
+    t.string "name_pl"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "countries", force: :cascade do |t|
-    t.string "name"
+    t.string "name_pl"
+    t.string "name_eng"
     t.bigint "continent_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -67,14 +69,16 @@ ActiveRecord::Schema.define(version: 2019_06_27_225156) do
   end
 
   create_table "events", force: :cascade do |t|
-    t.string "name", default: ""
-    t.string "description"
+    t.string "title_eng", default: "Happened today:"
+    t.string "title_pl", default: "Wydarzyło się dzisiaj:"
+    t.string "description_eng"
+    t.string "description_pl"
     t.integer "date"
     t.integer "year"
     t.integer "month"
     t.integer "day"
-    t.string "read_more", default: "-"
-    t.string "language"
+    t.string "read_more_eng", default: "-"
+    t.string "read_more_pl", default: "-"
     t.boolean "published", default: false
     t.bigint "place_id"
     t.bigint "country_id"
@@ -88,18 +92,21 @@ ActiveRecord::Schema.define(version: 2019_06_27_225156) do
     t.string "name"
     t.integer "death"
     t.integer "birth"
-    t.string "bio"
+    t.string "bio_eng"
+    t.string "bio_pl"
     t.string "picture"
-    t.string "quote"
-    t.string "read_more", default: "-"
-    t.string "language", default: "English"
+    t.string "quote_eng"
+    t.string "quote_pl"
+    t.string "read_more_eng", default: "-"
+    t.string "read_more_pl", default: "-"
     t.boolean "published", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "places", force: :cascade do |t|
-    t.string "name"
+    t.string "name_eng"
+    t.string "name_pl"
     t.decimal "latitude", precision: 10, scale: 6
     t.decimal "longitude", precision: 10, scale: 6
     t.integer "zip"
@@ -127,7 +134,8 @@ ActiveRecord::Schema.define(version: 2019_06_27_225156) do
   end
 
   create_table "types", force: :cascade do |t|
-    t.string "name"
+    t.string "name_eng"
+    t.string "name_pl"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

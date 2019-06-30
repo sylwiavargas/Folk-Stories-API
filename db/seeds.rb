@@ -44,13 +44,11 @@ usa = Country.create!(name_eng: "USA", name_pl: "USA", continent_id: north_am.id
 nyc = Place.create!(name_eng: "New York City", name_pl: "Nowy Jork", zip: 10001, country_id: usa.id, latitude: 40.7128, longitude: 74.0060)
 
 ################# EVENTS ###############
-radio = Event.create!(title_eng: "Eleanor Roosevelt on radio!", title_pl: "Eleanor Roosevelt w radiu!", description_eng: "Eleanor Roosevelt gave first radio program - she talked about the effect of movies on children, the need for a censor who could make sure movies did not glorify crime and violence.", description_pl: "Eleanor Roosevelt po raz pierwszy wystąpiła w radiu, gdzie rozmawiała o efektach filmów na dzieci i potrzebie wprowadzenia cenzury filmów, które gloryfikują przestępstwa i przemoc.", date: 19340709, year: 1934, month: 7, day: 9, read_more_eng: "https://www.nytimes.com/1934/07/10/archives/movies-discussed-by-mrs-roosevelt-in-debut-as-radio-news.html?searchResultPosition=1", read_more_eng: "https://www.nytimes.com/1934/07/10/archives/movies-discussed-by-mrs-roosevelt-in-debut-as-radio-news.html?searchResultPosition=1", place_id: nyc.id, country_id: usa.id)
+radio = Event.create!(title_eng: "Eleanor Roosevelt on radio!", title_pl: "Eleanor Roosevelt w radiu!", description_eng: "Eleanor Roosevelt gave first radio program - she talked about the effect of movies on children, the need for a censor who could make sure movies did not glorify crime and violence.", description_pl: "Eleanor Roosevelt po raz pierwszy wystąpiła w radiu, gdzie rozmawiała o efektach filmów na dzieci i potrzebie wprowadzenia cenzury filmów, które gloryfikują przestępstwa i przemoc.", date: 19340709, year: 1934, month: 7, day: 9, read_more_eng: "https://www.nytimes.com/1934/07/10/archives/movies-discussed-by-mrs-roosevelt-in-debut-as-radio-news.html?searchResultPosition=1", read_more_pl: "https://www.nytimes.com/1934/07/10/archives/movies-discussed-by-mrs-roosevelt-in-debut-as-radio-news.html?searchResultPosition=1", place_id: nyc.id, country_id: usa.id)
 
 ################# TYPES ###############
-women_pl = Type.create!(name: "Kobiety")
-women_eng = Type.create!(name: "Women")
-queer_pl = Type.create!(name: "Queer")
-queer_eng = Type.create!(name: "Queer")
+women = Type.create!(name_eng: "Women", name_pl: "Kobiety")
+queer = Type.create!(name_eng: "Queer", name_pl: "Queer")
 
 ################# SUBSCRIPTIONS ###############
 sylwia_slack = Subscription.create!(name: "Slack", user_id: sylwia.id)
@@ -58,14 +56,10 @@ sylwia_google = Subscription.create!(name: "Google", user_id: sylwia.id)
 joel_slack = Subscription.create!(name: "Slack", user_id: joel.id)
 
 ################# JOINTS ###############
-Tsu.create!(type_id: women_pl.id, subscription_id: sylwia_slack.id)
-Tsu.create!(type_id: queer_pl.id, subscription_id: sylwia_slack.id)
-Tsu.create!(type_id: queer_eng.id, subscription_id: joel_slack.id)
-Et.create!(event_id: radio_eng.id, type_id: women_eng.id)
-Et.create!(event_id: radio_pl.id, type_id: women_pl.id)
-Ep.create!(event_id: radio_eng.id, person_id: eleanor_eng.id)
-Ep.create!(event_id: radio_pl.id, person_id: eleanor_pl.id)
-Cp.create!(country_id: usa.id, person_id: eleanor_eng.id)
-Cp.create!(country_id: usa.id, person_id: amelia_eng.id)
-Cp.create!(country_id: usa.id, person_id: eleanor_pl.id)
-Cp.create!(country_id: usa.id, person_id: amelia_pl.id)
+Tsu.create!(type_id: women.id, subscription_id: sylwia_slack.id)
+Tsu.create!(type_id: queer.id, subscription_id: sylwia_slack.id)
+Tsu.create!(type_id: queer.id, subscription_id: joel_slack.id)
+Et.create!(event_id: radio.id, type_id: women.id)
+Ep.create!(event_id: radio.id, person_id: eleanor.id)
+Cp.create!(country_id: usa.id, person_id: amelia.id)
+Cp.create!(country_id: usa.id, person_id: eleanor.id)

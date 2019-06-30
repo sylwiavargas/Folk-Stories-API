@@ -5,5 +5,5 @@ class Type < ApplicationRecord
   has_many :tsus
   has_many :subscriptions, :through => :tsus
 
-  validates :name, presence: true
+  validates :name_eng, presence: true
 end

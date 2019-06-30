@@ -1,5 +1,5 @@
 class TypeSerializer < ActiveModel::Serializer
-  attributes :id, :name
+  attributes :id, :name_eng, :name_pl
 
   has_many :ets
   has_many :events, :through => :ets
