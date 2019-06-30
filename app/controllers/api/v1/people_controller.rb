@@ -1,6 +1,7 @@
 require 'byebug'
 
 class Api::V1::PeopleController < ApplicationController
+  skip_before_action :authorized
 
   def index
     @people = Person.all
