@@ -5,6 +5,7 @@ class Continent < ApplicationRecord
   has_many :cps, :through => :countries
   has_many :people, :through => :cps
 
-  validates :name, presence: true
+  validates :name_eng, presence: true
+  validates :name_pl, presence: true
 
 end

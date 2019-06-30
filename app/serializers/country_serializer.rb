@@ -1,5 +1,5 @@
 class CountrySerializer < ActiveModel::Serializer
-  attributes :id, :name, :continent_id, 
+  attributes :id, :name_eng, :name_pl, :continent_id, 
 
   has_many :places
   has_many :cps

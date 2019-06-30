@@ -1,3 +1,3 @@
 class ContinentSerializer < ActiveModel::Serializer
-  attributes :id, :name
+  attributes :id, :name_pl, :name_eng
 end

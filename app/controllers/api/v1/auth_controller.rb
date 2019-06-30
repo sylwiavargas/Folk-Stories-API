@@ -12,7 +12,11 @@ class Api::V1::AuthController < ApplicationController
   end
 
   def reAuth
-    render json: { user: UserSerializer.new(current_user) }, status: :accepted
+    if current_user
+      render json: current_user, status: :accepted
+    else
+      render json: { errors: 'wat'}
+    end
   end
 
   private
