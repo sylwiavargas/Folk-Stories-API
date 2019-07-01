@@ -193,3 +193,13 @@ Et.create!(event_id: radio.id, type_id: women.id)
 Ep.create!(event_id: radio.id, person_id: eleanor.id)
 Cp.create!(country_id: usa.id, person_id: amelia.id)
 Cp.create!(country_id: usa.id, person_id: eleanor.id)
+
+#################### TESTY #################
+Ep.create!(event_id: 2, person_id: 2)
+Ep.create!(event_id: 2, person_id: 1)
+Event.create!(title_eng: "Queery", title_pl: "Queery!", description_eng: "Wydarzenie Queerowe", description_
+pl: "Wydarzenie Queerowe", mmddyyy: "19340709", year_era_id: 1934, month_id: 7, day_id: 9, month_day_id: 195, read_more_e
+ng: "https://www.nytimes.com/1934/07/10/archives/movies-discussed-by-mrs-roosevelt-in-debut-as-radio-news.html?searchResu
+ltPosition=1", read_more_pl: "https://www.nytimes.com/1934/07/10/archives/movies-discussed-by-mrs-roosevelt-in-debut-as-r
+adio-news.html?searchResultPosition=1", place_id: 1, country_id: 1)
+Et.create!(event_id: 2, type_id: 2)
