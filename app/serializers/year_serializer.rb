@@ -1,3 +1,5 @@
 class YearSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :year, :era
+
+  has_many :events
 end

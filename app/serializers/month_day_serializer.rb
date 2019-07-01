@@ -1,3 +1,5 @@
 class MonthDaySerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :mmdd, :month, :day
+
+  has_many :events
 end

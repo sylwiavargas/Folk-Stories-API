@@ -1,3 +1,3 @@
 class DaySerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :day
 end

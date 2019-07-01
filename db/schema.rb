@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_27_225156) do
+ActiveRecord::Schema.define(version: 2019_07_01_134432) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,6 +50,12 @@ ActiveRecord::Schema.define(version: 2019_06_27_225156) do
     t.index ["person_id"], name: "index_cps_on_person_id"
   end
 
+  create_table "days", force: :cascade do |t|
+    t.integer "day"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "eps", force: :cascade do |t|
     t.bigint "event_id"
     t.bigint "person_id"
@@ -73,10 +79,9 @@ ActiveRecord::Schema.define(version: 2019_06_27_225156) do
     t.string "title_pl", default: "Wydarzyło się dzisiaj:"
     t.string "description_eng"
     t.string "description_pl"
-    t.integer "date"
-    t.integer "year"
-    t.integer "month"
-    t.integer "day"
+    t.bigint "year_id"
+    t.bigint "month_day_id"
+    t.integer "mmddyyy"
     t.string "read_more_eng", default: "-"
     t.string "read_more_pl", default: "-"
     t.boolean "published", default: false
@@ -85,7 +90,27 @@ ActiveRecord::Schema.define(version: 2019_06_27_225156) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["country_id"], name: "index_events_on_country_id"
+    t.index ["month_day_id"], name: "index_events_on_month_day_id"
     t.index ["place_id"], name: "index_events_on_place_id"
+    t.index ["year_id"], name: "index_events_on_year_id"
+  end
+
+  create_table "month_days", force: :cascade do |t|
+    t.integer "mmdd"
+    t.bigint "month_id"
+    t.bigint "day_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["day_id"], name: "index_month_days_on_day_id"
+    t.index ["month_id"], name: "index_month_days_on_month_id"
+  end
+
+  create_table "months", force: :cascade do |t|
+    t.integer "month"
+    t.string "name_eng"
+    t.string "name_pl"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "people", force: :cascade do |t|
@@ -151,6 +176,13 @@ ActiveRecord::Schema.define(version: 2019_06_27_225156) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "years", force: :cascade do |t|
+    t.integer "year"
+    t.string "era", default: "-"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   add_foreign_key "connections", "people", column: "person_one_id"
   add_foreign_key "connections", "people", column: "person_two_id"
   add_foreign_key "countries", "continents"
@@ -161,7 +193,11 @@ ActiveRecord::Schema.define(version: 2019_06_27_225156) do
   add_foreign_key "ets", "events"
   add_foreign_key "ets", "types"
   add_foreign_key "events", "countries"
+  add_foreign_key "events", "month_days"
   add_foreign_key "events", "places"
+  add_foreign_key "events", "years"
+  add_foreign_key "month_days", "days"
+  add_foreign_key "month_days", "months"
   add_foreign_key "places", "countries"
   add_foreign_key "subscriptions", "users"
   add_foreign_key "tsus", "subscriptions"
