@@ -5,30 +5,45 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-User.destroy_all
-Person.destroy_all
-Connection.destroy_all
-Continent.destroy_all
-Country.destroy_all
-Event.destroy_all
-Place.destroy_all
-Type.destroy_all
-Subscription.destroy_all
 Cp.destroy_all
 Ep.destroy_all
 Et.destroy_all
 Tsu.destroy_all
+Subscription.destroy_all
+Connection.destroy_all
+User.destroy_all
+Event.destroy_all
+Place.destroy_all
+Country.destroy_all
+MonthDay.destroy_all
+YearEra.destroy_all
+Type.destroy_all
 Year.destroy_all
 Day.destroy_all
 Month.destroy_all
-Month_Day.destroy_all
+Era.destroy_all
+Person.destroy_all
+Continent.destroy_all
 
-################## YEARS ##############
-counter = 1
-2019.times do
-  Year.create!(year: counter, era: nil)
-  counter += 1
-end
+Connection.reset_pk_sequence
+User.reset_pk_sequence
+Person.reset_pk_sequence
+Continent.reset_pk_sequence
+Country.reset_pk_sequence
+Event.reset_pk_sequence
+Place.reset_pk_sequence
+Type.reset_pk_sequence
+Subscription.reset_pk_sequence
+Cp.reset_pk_sequence
+Ep.reset_pk_sequence
+Et.reset_pk_sequence
+Tsu.reset_pk_sequence
+Year.reset_pk_sequence
+Day.reset_pk_sequence
+Month.reset_pk_sequence
+MonthDay.reset_pk_sequence
+Era.reset_pk_sequence
+YearEra.reset_pk_sequence
 
 ################# USERS ###############
 
@@ -55,7 +70,7 @@ usa = Country.create!(name_eng: "USA", name_pl: "USA", continent_id: north_am.id
 nyc = Place.create!(name_eng: "New York City", name_pl: "Nowy Jork", zip: 10001, country_id: usa.id, latitude: 40.7128, longitude: 74.0060)
 
 ################ DAYS ##################
-start = Day.create!(day: 0)
+
 d1 = Day.create!(day: 1)
 d2 = Day.create!(day: 2)
 d3 = Day.create!(day: 3)
@@ -90,7 +105,6 @@ d31 = Day.create!(day: 31)
 
 ################## MONTHS ##############
 
-m0 = Month.create!(month:0)
 m1 = Month.create!(month:1, name_eng:"January", name_pl:"Styczeń")
 m2 = Month.create!(month:2, name_eng:"February", name_pl:"Luty")
 m3 = Month.create!(month:3, name_eng:"March", name_pl:"Marzec")
@@ -105,18 +119,71 @@ m11 = Month.create!(month:11, name_eng:"November", name_pl:"Listopad")
 m12 = Month.create!(month:12, name_eng:"December", name_pl:"Grudzień")
 
 
+################## YEARS ##############
+counter = 1
+2019.times do
+  Year.create!(year: counter)
+  counter += 1
+end
 
-################# EVENTS ###############
-radio = Event.create!(title_eng: "Eleanor Roosevelt on the radio!", title_pl: "Eleanor Roosevelt w radiu!", description_eng: "Eleanor Roosevelt gave first radio interview - she advocted for less violent tv as violent images impact children.", description_pl: "Eleanor Roosevelt po raz pierwszy wystąpiła w radiu, gdzie rozmawiała o efektach filmów na dzieci i potrzebie wprowadzenia cenzury filmów, które gloryfikują przestępstwa i przemoc.", date: 19340709, year: 1934, month: 7, day: 9, read_more_eng: "https://www.nytimes.com/1934/07/10/archives/movies-discussed-by-mrs-roosevelt-in-debut-as-radio-news.html?searchResultPosition=1", read_more_pl: "https://www.nytimes.com/1934/07/10/archives/movies-discussed-by-mrs-roosevelt-in-debut-as-radio-news.html?searchResultPosition=1", place_id: nyc.id, country_id: usa.id)
+################## ERAS ##############
+
+ac = Era.create!(era:"AC")
+bc = Era.create!(era:"BC")
+
 
 ################# TYPES ###############
 women = Type.create!(name_eng: "Women", name_pl: "Kobiety")
 queer = Type.create!(name_eng: "Queer", name_pl: "Queer")
 
+
+################## YEARERAS ##############
+
+accounter = 1
+2019.times do
+  YearEra.create!(yera: "#{accounter} AC", year_id: "#{accounter}", era_id: 1)
+end
+#
+# bccounter = 0
+# 300.times do
+#   YearEra.create!(yera: "#{bccounter} AC", year_id: "#{bccounter}", era_id: 2)
+# end
+
+################## MONTHDAYS ##############
+
+mcounter = 1
+
+12.times do
+  dcounter = 1
+  if mcounter == 1 || 3 || 5 || 7 || 8 || 10 || 12
+    31.times do
+      MonthDay.create!(mdd: "#{mcounter}#{dcounter}", month_id: "#{mcounter}", day_id: "#{dcounter}")
+      dcounter += 1
+    end
+  elsif mcounter == 2
+    28.times do
+      MonthDay.create!(mdd: "#{mcounter}#{dcounter}", month_id: "#{mcounter}", day_id: "#{dcounter}")
+      dcounter += 1
+    end
+  else
+    30.times do
+      MonthDay.create!(mdd: "#{mcounter}#{dcounter}", month_id: "#{mcounter}", day_id: "#{dcounter}")
+      dcounter += 1
+    end
+  end
+  mcounter += 1
+end
+
 ################# SUBSCRIPTIONS ###############
 sylwia_slack = Subscription.create!(name: "Slack", user_id: sylwia.id)
 sylwia_google = Subscription.create!(name: "Google", user_id: sylwia.id)
 joel_slack = Subscription.create!(name: "Slack", user_id: joel.id)
+
+
+################# EVENTS ###############
+# day = MonthDay.find{|md| md.month.id == 7 && md.day.id == 9}
+
+radio = Event.create!(title_eng: "Eleanor Roosevelt on the radio!", title_pl: "Eleanor Roosevelt w radiu!", description_eng: "Eleanor Roosevelt gave first radio interview - she advocted for less violent tv as violent images impact children.", description_pl: "Eleanor Roosevelt po raz pierwszy wystąpiła w radiu, gdzie rozmawiała o efektach filmów na dzieci i potrzebie wprowadzenia cenzury filmów, które gloryfikują przestępstwa i przemoc.", mmddyyy: "19340709", year_era_id: 1934, month_id: 7, day_id: 9, month_day_id: 195, read_more_eng: "https://www.nytimes.com/1934/07/10/archives/movies-discussed-by-mrs-roosevelt-in-debut-as-radio-news.html?searchResultPosition=1", read_more_pl: "https://www.nytimes.com/1934/07/10/archives/movies-discussed-by-mrs-roosevelt-in-debut-as-radio-news.html?searchResultPosition=1", place_id: nyc.id, country_id: usa.id)
 
 ################# JOINTS ###############
 Tsu.create!(type_id: women.id, subscription_id: sylwia_slack.id)

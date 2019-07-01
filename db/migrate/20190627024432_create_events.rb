@@ -7,6 +7,8 @@ class CreateEvents < ActiveRecord::Migration[5.2]
       t.string :description_pl
       t.references :year_era, foreign_key: true, index: true, default: ""
       t.references :month_day, foreign_key: true, index: true, default: ""
+      t.references :month, foreign_key: true, index: true, default: ""
+      t.references :day, foreign_key: true, index: true, default: ""
       t.string :mmddyyy
       t.string :read_more_eng, default: "-"
       t.string :read_more_pl, default: "-"

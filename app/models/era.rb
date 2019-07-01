@@ -1,4 +1,4 @@
 class Era < ApplicationRecord
-  has_many :year_era
+  has_many :year_eras
 
 end
