@@ -11,5 +11,5 @@ class Event < ApplicationRecord
 
   validates :title_eng, presence: true
   validates :description_eng, presence: true
-  validates :mmddyyy, presence: true, length: {is: 8}, numericality: { only_integer: true }
+  validates :mmddyyy, presence: true, length: {is: 8}
 end

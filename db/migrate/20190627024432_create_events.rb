@@ -7,7 +7,7 @@ class CreateEvents < ActiveRecord::Migration[5.2]
       t.string :description_pl
       t.references :year, foreign_key: true, index: true, default: ""
       t.references :month_day, foreign_key: true, index: true, default: ""
-      t.integer :mmddyyy
+      t.string :mmddyyy
       t.string :read_more_eng, default: "-"
       t.string :read_more_pl, default: "-"
       t.boolean :published, default: false

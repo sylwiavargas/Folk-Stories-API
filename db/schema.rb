@@ -81,7 +81,7 @@ ActiveRecord::Schema.define(version: 2019_07_01_134432) do
     t.string "description_pl"
     t.bigint "year_id"
     t.bigint "month_day_id"
-    t.integer "mmddyyy"
+    t.string "mmddyyy"
     t.string "read_more_eng", default: "-"
     t.string "read_more_pl", default: "-"
     t.boolean "published", default: false
@@ -96,7 +96,7 @@ ActiveRecord::Schema.define(version: 2019_07_01_134432) do
   end
 
   create_table "month_days", force: :cascade do |t|
-    t.integer "mmdd"
+    t.integer "mdd"
     t.bigint "month_id"
     t.bigint "day_id"
     t.datetime "created_at", null: false
