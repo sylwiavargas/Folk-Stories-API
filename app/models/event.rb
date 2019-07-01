@@ -1,8 +1,8 @@
 class Event < ApplicationRecord
-  belongs_to :place
-  belongs_to :country
-  belongs_to :month_day
-  belongs_to :year_era
+  belongs_to :place, optional: true
+  belongs_to :country, optional: true
+  belongs_to :month_day, optional: true
+  belongs_to :year_era, optional: true
 
   has_many :ets
   has_many :types, :through => :ets
