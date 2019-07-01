@@ -2,7 +2,7 @@ class Event < ApplicationRecord
   belongs_to :place
   belongs_to :country
   belongs_to :month_day
-  belongs_to :year
+  belongs_to :year_era
 
   has_many :ets
   has_many :types, :through => :ets

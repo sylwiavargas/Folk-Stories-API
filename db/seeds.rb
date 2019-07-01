@@ -18,6 +18,17 @@ Cp.destroy_all
 Ep.destroy_all
 Et.destroy_all
 Tsu.destroy_all
+Year.destroy_all
+Day.destroy_all
+Month.destroy_all
+Month_Day.destroy_all
+
+################## YEARS ##############
+counter = 1
+2019.times do
+  Year.create!(year: counter, era: nil)
+  counter += 1
+end
 
 ################# USERS ###############
 
@@ -45,37 +56,54 @@ nyc = Place.create!(name_eng: "New York City", name_pl: "Nowy Jork", zip: 10001,
 
 ################ DAYS ##################
 start = Day.create!(day: 0)
-1 = Day.create!(day: 1)
-2 = Day.create!(day: 2)
-3 = Day.create!(day: 3)
-4 = Day.create!(day: 4)
-5 = Day.create!(day: 5)
-6 = Day.create!(day: 6)
-7 = Day.create!(day: 7)
-8 = Day.create!(day: 8)
-9 = Day.create!(day: 9)
-10 = Day.create!(day: 10)
-11 = Day.create!(day: 11)
-12 = Day.create!(day: 12)
-13 = Day.create!(day: 13)
-14 = Day.create!(day: 14)
-15 = Day.create!(day: 15)
-16 = Day.create!(day: 16)
-17 = Day.create!(day: 17)
-18 = Day.create!(day: 18)
-19 = Day.create!(day: 19)
-20 = Day.create!(day: 20)
-21 = Day.create!(day: 21)
-22 = Day.create!(day: 22)
-23 = Day.create!(day: 23)
-24 = Day.create!(day: 24)
-25 = Day.create!(day: 25)
-26 = Day.create!(day: 26)
-27 = Day.create!(day: 27)
-28 = Day.create!(day: 28)
-29 = Day.create!(day: 29)
-30 = Day.create!(day: 30)
-31 = Day.create!(day: 31)
+d1 = Day.create!(day: 1)
+d2 = Day.create!(day: 2)
+d3 = Day.create!(day: 3)
+d4 = Day.create!(day: 4)
+d5 = Day.create!(day: 5)
+d6 = Day.create!(day: 6)
+d7 = Day.create!(day: 7)
+d8 = Day.create!(day: 8)
+d9 = Day.create!(day: 9)
+d10 = Day.create!(day: 10)
+d11 = Day.create!(day: 11)
+d12 = Day.create!(day: 12)
+d13 = Day.create!(day: 13)
+d14 = Day.create!(day: 14)
+d15 = Day.create!(day: 15)
+d16 = Day.create!(day: 16)
+d17 = Day.create!(day: 17)
+d18 = Day.create!(day: 18)
+d19 = Day.create!(day: 19)
+d20 = Day.create!(day: 20)
+d21 = Day.create!(day: 21)
+d22 = Day.create!(day: 22)
+d23 = Day.create!(day: 23)
+d24 = Day.create!(day: 24)
+d25 = Day.create!(day: 25)
+d26 = Day.create!(day: 26)
+d27 = Day.create!(day: 27)
+d28 = Day.create!(day: 28)
+d29 = Day.create!(day: 29)
+d30 = Day.create!(day: 30)
+d31 = Day.create!(day: 31)
+
+################## MONTHS ##############
+
+m0 = Month.create!(month:0)
+m1 = Month.create!(month:1, name_eng:"January", name_pl:"Styczeń")
+m2 = Month.create!(month:2, name_eng:"February", name_pl:"Luty")
+m3 = Month.create!(month:3, name_eng:"March", name_pl:"Marzec")
+m4 = Month.create!(month:4, name_eng:"April", name_pl:"Kwiecień")
+m5 = Month.create!(month:5, name_eng:"May", name_pl:"Maj")
+m6 = Month.create!(month:6, name_eng:"June", name_pl:"Czerwiec")
+m7 = Month.create!(month:7, name_eng:"July", name_pl:"Lipiec")
+m8 = Month.create!(month:8, name_eng:"August", name_pl:"Sierpień")
+m9 = Month.create!(month:9, name_eng:"September", name_pl:"Wrzesień")
+m10 = Month.create!(month:10, name_eng:"October", name_pl:"Październik")
+m11 = Month.create!(month:11, name_eng:"November", name_pl:"Listopad")
+m12 = Month.create!(month:12, name_eng:"December", name_pl:"Grudzień")
+
 
 
 ################# EVENTS ###############

@@ -1,5 +1,6 @@
 class Year < ApplicationRecord
-  has_many :events
+  has_many :year_era
+  has_many :events, through: :year_era
 
-  validates :year, presence: true, length: {is: 4}, numericality: { only_integer: true }
+  validates :year, presence: true, numericality: { only_integer: true }
 end
