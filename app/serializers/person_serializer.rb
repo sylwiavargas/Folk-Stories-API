@@ -1,5 +1,5 @@
 class PersonSerializer < ActiveModel::Serializer
-  attributes :id, :name, :birth, :death, :bio_pl, :bio_eng, :read_more_eng, :read_more_pl, :quote_pl, :quote_eng
+  attributes :id, :name, :birth, :death, :bio_pl, :bio_eng, :read_more_eng, :read_more_pl, :quote_pl, :quote_eng, :picture
 
   has_many :cps
   has_many :countries, :through => :cps
