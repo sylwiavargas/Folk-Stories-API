@@ -13,6 +13,10 @@ Rails.application.routes.draw do
      resources :places#, only: [:index, :update]
      resources :types#, only: [:index, :update]
      resources :users#, only: [:index, :update, :create]
+     resources :days
+     resources :months
+     resources :years
+     resources :month_days
      post '/login', to: 'auth#create'
      get '/profile', to: 'users#profile'
      get '/reauth', to: "auth#reauth"

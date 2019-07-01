@@ -5,10 +5,9 @@ class CreateEvents < ActiveRecord::Migration[5.2]
       t.string :title_pl, default: "Wydarzyło się dzisiaj:"
       t.string :description_eng
       t.string :description_pl
-      t.integer :date
-      t.integer :year
-      t.integer :month
-      t.integer :day
+      t.references :year, foreign_key: true, index: true, default: ""
+      t.references :month_day, foreign_key: true, index: true, default: ""
+      t.integer :mmddyyy
       t.string :read_more_eng, default: "-"
       t.string :read_more_pl, default: "-"
       t.boolean :published, default: false

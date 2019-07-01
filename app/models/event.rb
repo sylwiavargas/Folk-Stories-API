@@ -1,6 +1,8 @@
 class Event < ApplicationRecord
   belongs_to :place
   belongs_to :country
+  belongs_to :month_day
+  belongs_to :year
 
   has_many :ets
   has_many :types, :through => :ets
@@ -9,7 +11,5 @@ class Event < ApplicationRecord
 
   validates :title_eng, presence: true
   validates :description_eng, presence: true
-  validates :year, presence: true
-  validates :month, presence: true
-  validates :day, presence: true
+  validates :mmddyyy, presence: true, length: {is: 8}, numericality: { only_integer: true }
 end
