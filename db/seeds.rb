@@ -155,13 +155,13 @@ mcounter = 1
 
 12.times do
   dcounter = 1
-  if mcounter == 1 || 3 || 5 || 7 || 8 || 10 || 12
+  if mcounter == 1 || mcounter == 3 || mcounter == 5 || mcounter == 7 || mcounter == 8 || mcounter == 10 || mcounter == 12
     31.times do
       MonthDay.create!(mdd: "#{mcounter}#{dcounter}", month_id: "#{mcounter}", day_id: "#{dcounter}")
       dcounter += 1
     end
   elsif mcounter == 2
-    28.times do
+    29.times do
       MonthDay.create!(mdd: "#{mcounter}#{dcounter}", month_id: "#{mcounter}", day_id: "#{dcounter}")
       dcounter += 1
     end
@@ -195,11 +195,7 @@ Cp.create!(country_id: usa.id, person_id: amelia.id)
 Cp.create!(country_id: usa.id, person_id: eleanor.id)
 
 #################### TESTY #################
+Event.create!(title_eng: "Queery", title_pl: "Queery!", description_eng: "Wydarzenie Queerowe", description_pl: "Wydarzenie Queerowe", mmddyyy: "19340709", year_era_id: 1934, month_id: 7, day_id: 9, month_day_id: 195, read_more_eng: "https://www.nytimes.com/1934/07/10/archives/movies-discussed-by-mrs-roosevelt-in-debut-as-radio-news.html?searchResultPosition=1", read_more_pl: "https://www.nytimes.com/1934/07/10/archives/movies-discussed-by-mrs-roosevelt-in-debut-as-radio-news.html?searchResultPosition=1", place_id: 1, country_id: 1)
+Et.create!(event_id: 2, type_id: 2)
 Ep.create!(event_id: 2, person_id: 2)
 Ep.create!(event_id: 2, person_id: 1)
-Event.create!(title_eng: "Queery", title_pl: "Queery!", description_eng: "Wydarzenie Queerowe", description_
-pl: "Wydarzenie Queerowe", mmddyyy: "19340709", year_era_id: 1934, month_id: 7, day_id: 9, month_day_id: 195, read_more_e
-ng: "https://www.nytimes.com/1934/07/10/archives/movies-discussed-by-mrs-roosevelt-in-debut-as-radio-news.html?searchResu
-ltPosition=1", read_more_pl: "https://www.nytimes.com/1934/07/10/archives/movies-discussed-by-mrs-roosevelt-in-debut-as-r
-adio-news.html?searchResultPosition=1", place_id: 1, country_id: 1)
-Et.create!(event_id: 2, type_id: 2)
