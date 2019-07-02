@@ -7,7 +7,7 @@ class Api::V1::MonthDaysController < ApplicationController
     end
 
     def show
-      @monthday = MonthDay.find(params[:id])
+      @monthday = MonthDay.find_by(mdd: params[:mdd])
       render json: { monthday: MonthDaySerializer.new(@monthday) }, status: :accepted
     end
 
