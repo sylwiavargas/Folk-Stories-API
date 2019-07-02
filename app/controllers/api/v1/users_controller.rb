@@ -1,7 +1,7 @@
 require 'byebug'
 
 class Api::V1::UsersController < ApplicationController
-  skip_before_action :authorized, only: [:create, :show, :index]#, :profile]
+  skip_before_action :authorized, only: [:create, :show, :index, :update]#, :profile]
 
   def profile
     render json: { user: UserSerializer.new(current_user) }, status: :accepted
@@ -43,6 +43,6 @@ class Api::V1::UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:username, :name, :password,  :password_confirmation, :email, :zip)
+    params.require(:user).permit(:username, :name, :password, :password_confirmation, :email, :zip)
   end
 end
