@@ -183,7 +183,7 @@ joel_slack = Subscription.create!(name: "Slack", user_id: joel.id)
 ################# EVENTS ###############
 # day = MonthDay.find{|md| md.month.id == 7 && md.day.id == 9}
 
-radio = Event.create!(title_eng: "Eleanor Roosevelt on the radio!", title_pl: "Eleanor Roosevelt w radiu!", description_eng: "Eleanor Roosevelt gave first radio interview - she advocted for less violent tv as violent images impact children.", description_pl: "Eleanor Roosevelt po raz pierwszy wystąpiła w radiu, gdzie rozmawiała o efektach filmów na dzieci i potrzebie wprowadzenia cenzury filmów, które gloryfikują przestępstwa i przemoc.", mmddyyy: "19340709", year_era_id: 1934, month_id: 7, day_id: 9, month_day_id: 195, read_more_eng: "https://www.nytimes.com/1934/07/10/archives/movies-discussed-by-mrs-roosevelt-in-debut-as-radio-news.html?searchResultPosition=1", read_more_pl: "https://www.nytimes.com/1934/07/10/archives/movies-discussed-by-mrs-roosevelt-in-debut-as-radio-news.html?searchResultPosition=1", place_id: nyc.id, country_id: usa.id)
+radio = Event.create!(title_eng: "Eleanor Roosevelt on the radio!", title_pl: "Eleanor Roosevelt w radiu!", description_eng: "Eleanor Roosevelt gave first radio interview - she advocted for less violent tv as violent images impact children.", description_pl: "Eleanor Roosevelt po raz pierwszy wystąpiła w radiu, gdzie rozmawiała o efektach filmów na dzieci i potrzebie wprowadzenia cenzury filmów, które gloryfikują przestępstwa i przemoc.", mmddyyy: "19340709", year_era_id: 1934, month_id: 7, day_id: 9, month_day_id: 191, read_more_eng: "https://www.nytimes.com/1934/07/10/archives/movies-discussed-by-mrs-roosevelt-in-debut-as-radio-news.html?searchResultPosition=1", read_more_pl: "https://www.nytimes.com/1934/07/10/archives/movies-discussed-by-mrs-roosevelt-in-debut-as-radio-news.html?searchResultPosition=1", place_id: nyc.id, country_id: usa.id)
 
 ################# JOINTS ###############
 Tsu.create!(type_id: women.id, subscription_id: sylwia_slack.id)
@@ -195,7 +195,7 @@ Cp.create!(country_id: usa.id, person_id: amelia.id)
 Cp.create!(country_id: usa.id, person_id: eleanor.id)
 
 #################### TESTY #################
-Event.create!(title_eng: "Queery", title_pl: "Queery!", description_eng: "Wydarzenie Queerowe", description_pl: "Wydarzenie Queerowe", mmddyyy: "19340709", year_era_id: 1934, month_id: 7, day_id: 9, month_day_id: 195, read_more_eng: "https://www.nytimes.com/1934/07/10/archives/movies-discussed-by-mrs-roosevelt-in-debut-as-radio-news.html?searchResultPosition=1", read_more_pl: "https://www.nytimes.com/1934/07/10/archives/movies-discussed-by-mrs-roosevelt-in-debut-as-radio-news.html?searchResultPosition=1", place_id: 1, country_id: 1)
+Event.create!(title_eng: "Queery", title_pl: "Queery!", description_eng: "Wydarzenie Queerowe", description_pl: "Wydarzenie Queerowe", mmddyyy: "19340709", year_era_id: 1934, month_id: 7, day_id: 9, month_day_id: 191, read_more_eng: "https://www.nytimes.com/1934/07/10/archives/movies-discussed-by-mrs-roosevelt-in-debut-as-radio-news.html?searchResultPosition=1", read_more_pl: "https://www.nytimes.com/1934/07/10/archives/movies-discussed-by-mrs-roosevelt-in-debut-as-radio-news.html?searchResultPosition=1", place_id: 1, country_id: 1)
 Et.create!(event_id: 2, type_id: 2)
 Ep.create!(event_id: 2, person_id: 2)
 Ep.create!(event_id: 2, person_id: 1)
