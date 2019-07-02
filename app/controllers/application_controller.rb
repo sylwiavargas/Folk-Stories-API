@@ -10,10 +10,12 @@ class ApplicationController < ActionController::API
   end
 
   def decoded_token
+    if auth_header
       begin
-        JWT.decode(auth_header, ENV['jwt_key'])
+        JWT.decode(auth_header.split(" ")[1], ENV['jwt_key'])
       rescue JWT::DecodeError
         nil
+      end
     end
   end
 
