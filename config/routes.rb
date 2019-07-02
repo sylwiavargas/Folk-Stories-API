@@ -16,7 +16,7 @@ Rails.application.routes.draw do
      resources :days
      resources :months
      resources :years
-     resources :month_days
+     resources :month_days, as: 'monthdays'
      post '/login', to: 'auth#create'
      get '/profile', to: 'users#profile'
      get '/reauth', to: "auth#reauth"
