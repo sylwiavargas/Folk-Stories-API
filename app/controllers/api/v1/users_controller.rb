@@ -1,7 +1,7 @@
 require 'byebug'
 
 class Api::V1::UsersController < ApplicationController
-  skip_before_action :authorized, only: [:create, :show, :index, :update]#, :profile]
+  skip_before_action :authorized, only: [:create, :show, :index]#, :profile]
 
   def profile
     render json: { user: UserSerializer.new(current_user) }, status: :accepted
@@ -38,6 +38,11 @@ class Api::V1::UsersController < ApplicationController
     @user = User.find(params[:id])
     @user.update(user_params)
     render json: @user, status: :accepted
+  end
+
+  def destroy
+    User.destroy(params[:id])
+    head :no_content
   end
 
   private
