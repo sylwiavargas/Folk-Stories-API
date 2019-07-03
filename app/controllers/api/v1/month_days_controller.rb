@@ -8,7 +8,7 @@ class Api::V1::MonthDaysController < ApplicationController
 
     def show
       @monthday = MonthDay.find_by(mdd: params[:mdd])
-      @events = @monthday.events.map{|e| {event: {id: e.id, title_eng: e.title_eng, description_eng: e.description_eng, year_era_id: e.year_era_id, read_more_eng: e.read_more_eng, types: e.types}}}
+      @events = @monthday.events.map{|e| {event: {id: e.id, title_eng: e.title_eng, description_eng: e.description_eng, year_era_id: e.year_era_id, read_more_eng: e.read_more_eng, types: e.types, people: e.people}}}
 
       render json: @events, status: :accepted
     end
