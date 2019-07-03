@@ -8,7 +8,9 @@ class Api::V1::MonthDaysController < ApplicationController
 
     def show
       @monthday = MonthDay.find_by(mdd: params[:mdd])
-      render json: { monthday: MonthDaySerializer.new(@monthday) }, status: :accepted
+      @events = @monthday.events.map{|e| {event: {id: e.id, title_eng: e.title_eng, description_eng: e.description_eng, year_era_id: e.year_era_id, read_more_eng: e.read_more_eng, types: e.types}}}
+
+      render json: @events, status: :accepted
     end
 
     def create
