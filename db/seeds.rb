@@ -199,3 +199,8 @@ Event.create!(title_eng: "Queery", title_pl: "Queery!", description_eng: "Wydarz
 Et.create!(event_id: 2, type_id: 2)
 Ep.create!(event_id: 2, person_id: 2)
 Ep.create!(event_id: 2, person_id: 1)
+
+Event.create!(title_eng: "Test 7/3", title_pl: "!", description_eng: "Test 7/3", description_pl: "Wydarzenie", mmddyyy: "19440703", year_era_id: 1944, month_id: 7, day_id: 3, month_day_id: 185, read_more_eng: "https://www.nytimes.com/1934/07/10/archives/movies-discussed-by-mrs-roosevelt-in-debut-as-radio-news.html?searchResultPosition=1", read_more_pl: "https://www.nytimes.com/1934/07/10/archives/movies-discussed-by-mrs-roosevelt-in-debut-as-radio-news.html?searchResultPosition=1", place_id: 1, country_id: 1)
+Ep.create!(event_id: 3, person_id: 2)
+Ep.create!(event_id: 3, person_id: 1)
+Et.create!(event_id: 3, type_id: 1)
