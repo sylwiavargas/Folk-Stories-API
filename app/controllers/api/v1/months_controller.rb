@@ -7,14 +7,14 @@ class Api::V1::MonthsController < ApplicationController
     end
 
     def show
-      @month = Months.find_by(mdd: params[:mdd])
-      @events = @month.events.map{|e| {event: {id: e.id, name_eng: e.name_eng, name_pl: e.name_pl, events: e.events}}}
+      @month = Month.find_by(mdd: params[:mdd])
+      @event = @month.events.map{|e| {event: {id: e.id, name_eng: e.name_eng, name_pl: e.name_pl, events: e.events}}}
 
       render json: @events, status: :accepted
     end
 
     def create
-      @month = Months.create(month_params)
+      @month = Month.create(month_params)
       if @month.valid?
         render json: @month, status: :created
       else
@@ -27,7 +27,7 @@ class Api::V1::MonthsController < ApplicationController
     end
 
     def update
-      @month = Months.find(params[:id])
+      @month = Month.find(params[:id])
       @month.update(month_params)
       render json: @month, status: :accepted
     end
@@ -35,6 +35,6 @@ class Api::V1::MonthsController < ApplicationController
     private
 
     def month_params
-      params.require(:month).permit(:mdd, :month_id, :day_id)
+      params.require(:month).permit(:month, :name_pl, :name_eng)
     end
   end
