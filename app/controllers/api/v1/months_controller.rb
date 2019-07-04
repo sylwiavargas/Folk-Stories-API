@@ -7,10 +7,8 @@ class Api::V1::MonthsController < ApplicationController
     end
 
     def show
-      @month = Month.find_by(mdd: params[:mdd])
-      @event = @month.events.map{|e| {event: {id: e.id, name_eng: e.name_eng, name_pl: e.name_pl, events: e.events}}}
-
-      render json: @events, status: :accepted
+      @month = Month.find(params[:id])
+      render json: @month, status: :accepted
     end
 
     def create
