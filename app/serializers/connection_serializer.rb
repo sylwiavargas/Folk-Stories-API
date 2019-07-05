@@ -1,5 +1,4 @@
 class ConnectionSerializer < ActiveModel::Serializer
-  attributes :id, :relationship, :person_one_id, :person_two_id
-
+  attributes :id, :relationship, :person_one, :person_two
   
 end

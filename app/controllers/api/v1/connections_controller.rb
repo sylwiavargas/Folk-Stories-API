@@ -7,10 +7,11 @@ class Api::V1::ConnectionsController < ApplicationController
     end
 
     def show
-      @connection = Connection.find_by(mdd: params[:mdd])
-      @events = @connection.events.map{|e| {event: {id: e.id, title_eng: e.title_eng, description_eng: e.description_eng, month_id: e.month_id, day_id: e.day_id, year_era_id: e.year_era_id, read_more_eng: e.read_more_eng, types: e.types, people: e.people}}}
+      @connection = Connection.find(params[:id])
+      @person_one = @connection.person_one
+      @person_two = @connection.person_two
 
-      render json: @events, status: :accepted
+      render json: @connection, status: :accepted
     end
 
     def create

@@ -6,3 +6,4 @@ class Connection < ApplicationRecord
   validates :person_two_id, presence: true
   validates :relationship, presence: true
 end
+ 
