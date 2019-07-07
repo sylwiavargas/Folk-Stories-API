@@ -3,9 +3,12 @@ class PersonSerializer < ActiveModel::Serializer
 
   has_many :cps
   has_many :countries, :through => :cps
-  has_many :places, :through => :countries
   has_many :eps
   has_many :events, :through => :eps
+  has_many :pps
+  has_many :places, :through => :pps
+
+
 end
 
 # has_many :connections

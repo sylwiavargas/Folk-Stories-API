@@ -194,23 +194,5 @@ Ep.create!(event_id: radio.id, person_id: eleanor.id)
 Cp.create!(country_id: usa.id, person_id: amelia.id)
 Cp.create!(country_id: usa.id, person_id: eleanor.id)
 
+
 #################### TESTY #################
-Event.create!(title_eng: "Queery", title_pl: "Queery!", description_eng: "Wydarzenie Queerowe", description_pl: "Wydarzenie Queerowe", mmddyyy: "19340709", year_era_id: 1934, month_id: 7, day_id: 9, month_day_id: 191, read_more_eng: "https://www.nytimes.com/1934/07/10/archives/movies-discussed-by-mrs-roosevelt-in-debut-as-radio-news.html?searchResultPosition=1", read_more_pl: "https://www.nytimes.com/1934/07/10/archives/movies-discussed-by-mrs-roosevelt-in-debut-as-radio-news.html?searchResultPosition=1", place_id: 1, country_id: 1)
-Et.create!(event_id: 2, type_id: 2)
-Ep.create!(event_id: 2, person_id: 2)
-Ep.create!(event_id: 2, person_id: 1)
-
-Event.create!(title_eng: "Test 7/3", title_pl: "!", description_eng: "Test 7/3", description_pl: "Wydarzenie", mmddyyy: "19440703", year_era_id: 1944, month_id: 7, day_id: 3, month_day_id: 185, read_more_eng: "https://www.nytimes.com/1934/07/10/archives/movies-discussed-by-mrs-roosevelt-in-debut-as-radio-news.html?searchResultPosition=1", read_more_pl: "https://www.nytimes.com/1934/07/10/archives/movies-discussed-by-mrs-roosevelt-in-debut-as-radio-news.html?searchResultPosition=1", place_id: 1, country_id: 1)
-Ep.create!(event_id: 3, person_id: 2)
-Ep.create!(event_id: 3, person_id: 1)
-Et.create!(event_id: 3, type_id: 1)
-
-Event.create!(title_eng: "Queery", title_pl: "Queery!", description_eng: "Wydarzenie Queerowe", description_pl: "Wydarzenie Queerowe", mmddyyy: "19340709", year_era_id: 1934, month_id: 7, day_id: 3, month_day_id: 185, read_more_eng: "https://stackoverflow.com/questions/8498592/extract-hostname-name-from-string", read_more_pl: "https://stackoverflow.com/questions/8498592/extract-hostname-name-from-string", place_id: 1, country_id: 1)
-Et.create!(event_id: 4, type_id: 2)
-Ep.create!(event_id: 4, person_id: 2)
-Ep.create!(event_id: 4, person_id: 1)
-
-Event.create!(title_eng: "Eleanor Roosevelt on the radio!", title_pl: "Eleanor Roosevelt w radiu!", description_eng: "Eleanor Roosevelt gave first radio interview - she advocted for less violent tv as violent images impact children.", description_pl: "Eleanor Roosevelt po raz pierwszy wystąpiła w radiu, gdzie rozmawiała o efektach filmów na dzieci i potrzebie wprowadzenia cenzury filmów, które gloryfikują przestępstwa i przemoc.", mmddyyy: "19340709", year_era_id: 1976, month_id: 7, day_id: 3, month_day_id: 185, read_more_eng: "https://medium.com/@650egor/react-30-day-challenge-day-1-simple-timer-df85d0867553", read_more_pl: "chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#ttl=sylwiavargas%20(Sylwia%20Vargas)&pos=175&uri=https://github.com/sylwiavargas", place_id: 1, country_id: 1)
-Et.create!(event_id: 5, type_id: 1)
-Ep.create!(event_id: 5, person_id: 2)
-Ep.create!(event_id: 5, person_id: 2)

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_01_153532) do
+ActiveRecord::Schema.define(version: 2019_07_07_185028) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -151,6 +151,16 @@ ActiveRecord::Schema.define(version: 2019_07_01_153532) do
     t.index ["country_id"], name: "index_places_on_country_id"
   end
 
+  create_table "pps", force: :cascade do |t|
+    t.bigint "place_id"
+    t.bigint "person_id"
+    t.string "description_eng"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["person_id"], name: "index_pps_on_person_id"
+    t.index ["place_id"], name: "index_pps_on_place_id"
+  end
+
   create_table "subscriptions", force: :cascade do |t|
     t.string "name"
     t.bigint "user_id"
@@ -220,6 +230,8 @@ ActiveRecord::Schema.define(version: 2019_07_01_153532) do
   add_foreign_key "month_days", "days"
   add_foreign_key "month_days", "months"
   add_foreign_key "places", "countries"
+  add_foreign_key "pps", "people"
+  add_foreign_key "pps", "places"
   add_foreign_key "subscriptions", "users"
   add_foreign_key "tsus", "subscriptions"
   add_foreign_key "tsus", "types"
