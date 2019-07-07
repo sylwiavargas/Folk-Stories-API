@@ -15,6 +15,7 @@ Rails.application.routes.draw do
      resources :users#, only: [:index, :update, :create]
      resources :days
      resources :months
+     resources :pps
      resources :years
      resources :dates, controller: 'month_days', param: :mdd
      post '/login', to: 'auth#create'
