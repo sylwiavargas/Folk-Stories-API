@@ -479,7 +479,7 @@ wilma = Person.create!(
   ################# EVENTS ###############
   # day = MonthDay.find{|md| md.month.id == 7 && md.day.id == 9}
 
-  radio = Event.create!(title_eng: "Eleanor Roosevelt on the radio!", title_pl: "Eleanor Roosevelt w radiu!", description_eng: "Eleanor Roosevelt gave first radio interview - she advocted for less violent tv as violent images impact children.", description_pl: "Eleanor Roosevelt po raz pierwszy wystąpiła w radiu, gdzie rozmawiała o efektach filmów na dzieci i potrzebie wprowadzenia cenzury filmów, które gloryfikują przestępstwa i przemoc.", mmddyyy: "19340709", year_era_id: 1934, month_id: 7, day_id: 9, month_day_id: 191, read_more_eng: "https://www.nytimes.com/1934/07/10/archives/movies-discussed-by-mrs-roosevelt-in-debut-as-radio-news.html?searchResultPosition=1", read_more_pl: "https://www.nytimes.com/1934/07/10/archives/movies-discussed-by-mrs-roosevelt-in-debut-as-radio-news.html?searchResultPosition=1", place_id: nyc.id, country_id: usa.id)
+  radio = Event.create!(title_eng: "Eleanor Roosevelt on the radio!", title_pl: "Eleanor Roosevelt w radiu!", description_eng: "Eleanor Roosevelt gave first radio interview - she advocted for less violent tv as violent images impact children.", description_pl: "Eleanor Roosevelt po raz pierwszy wystąpiła w radiu, gdzie rozmawiała o efektach filmów na dzieci i potrzebie wprowadzenia cenzury filmów, które gloryfikują przestępstwa i przemoc.", mmddyyy: "19340709", year_era_id: 1934, month_id: 7, day_id: 10, month_day_id: 191, read_more_eng: "https://www.nytimes.com/1934/07/10/archives/movies-discussed-by-mrs-roosevelt-in-debut-as-radio-news.html?searchResultPosition=1", read_more_pl: "https://www.nytimes.com/1934/07/10/archives/movies-discussed-by-mrs-roosevelt-in-debut-as-radio-news.html?searchResultPosition=1", place_id: nyc.id, country_id: usa.id)
 
   nwpc = Event.create!(title_eng: "300 women started National Women's Political Caucus (NWPC)", title_pl: "Trzysta Amerykanek założyło w USA National Women's Political Caucus (NWPC)", description_eng: "National Women's Political Caucus (NWPC) was founded by over 300 women including Gloria Steinem, Bella Abzug, Betty Friedan, Shirley Chisholm, and Myrlie Evers-Williams.", description_pl: "Wśród nich były: Gloria Steinem, Bella Abzug, Betty Friedan, Shirley Chisholm i Myrlie Evers-Williams.", mmddyyy: "19710711", year_era_id: 1971, month_id: 7, day_id: 11, month_day_id: 193, read_more_eng: " ", read_more_pl: " ", place_id: nyc.id, country_id: usa.id)
 
@@ -514,6 +514,7 @@ wilma = Person.create!(
   Ep.create!(event_id: stonewall_riots.id, person_id: marsha.id)
   Ep.create!(event_id: stonewall_riots.id, person_id: storme.id)
   Et.create!(event_id: radio.id, type_id: women.id)
+  Et.create!(event_id: radio.id, type_id: queer.id)
   Et.create!(event_id: not_guilty_angela.id, type_id: 1)
   Ep.create!(event_id: not_guilty_angela.id, person_id: angela.id)
   Ep.create!(event_id: martha_school.id, person_id: martha.id)
