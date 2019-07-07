@@ -12,10 +12,6 @@ read_more_pl: "https://pl.wikipedia.org/wiki/Nina_Simone",
 picture: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Nina_Simone_%281965%29.jpg/180px-Nina_Simone_%281965%29.jpg"
 )
 
-barbados = Place.create!(name_eng: "Barbados", name_pl: "Barbados", zip: BB15028, country_id: usa.id, latitude: 13.193887, longitude: -59.543198)
-barb_country = Country.create!(name_eng: "Barbados", name_pl: "Barbados", continent_id: north_am.id)
-julliard = Place.create!(name_eng: "Julliard School", name_pl: "Julliard School", zip: "10023", country_id: usa.id, latitude: 40.773871, longitude: 40.773871 -73.983178)
-
 Cp.create!(country_id: usa.id, person_id: nina.id)
 Cp.create!(country_id: barbados.id, person_id: nina.id)
 Pp.create!(place_id: julliard.id, person_id: nina.id, description: "Nina Simone studied classical piano at Julliard School")
@@ -36,10 +32,10 @@ read_more_eng: "https://en.wikipedia.org/wiki/Susan_Sontag",
 read_more_pl: "https://pl.wikipedia.org/wiki/Susan_Sontag",
 picture: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Susan_Sontag_1979_©Lynn_Gilbert_%28headshot%29.jpg"
 )
-cuny = Place.create!(name_eng: "City University of New York", name_pl: "Uniwersytet Miejski Nowego Jorku", zip: "", country_id: usa.id, latitude: 40.8194, longitude: -73.95)
+
 
 Cp.create!(country_id: usa.id, person_id: susan.id)
-Pp.create!(country_id: cuny.id, person_id: susan.id, description_eng: "Susan Sontag taught philosophy at CUNY from 1960 to 1964")
+Pp.create!(place_id: cuny.id, person_id: susan.id, description_eng: "Susan Sontag taught philosophy at CUNY from 1960 to 1964")
 
 ------------------------------------------
 
@@ -80,10 +76,9 @@ read_more_eng: "https://en.wikipedia.org/wiki/Dorothy_Pitman_Hughes",
 read_more_pl: "https://en.wikipedia.org/wiki/Dorothy_Pitman_Hughes",
 picture: "http://cdn2.creativecirclemedia.com/folioweekly/original/1502221926_a8e7.jpg")
 
-nycacs = Place.create!(name_eng: "York City Administration for Children's Services", name_pl: "York City Administration for Children's Services", zip: "10038", country_id: usa.id, latitude: 40.708850, longitude: -74.007870)
 
 Cp.create!(country_id: usa.id, person_id: dorothy.id)
-Pp.create!(country_id: nycacs.id, person_id: dorothy.id, description_eng: "Dorothy Pitman Hughes co-founded the New York City Agency for Child Development in 1972.")
+Pp.create!(place_id: nycacs.id, person_id: dorothy.id, description_eng: "Dorothy Pitman Hughes co-founded the New York City Agency for Child Development in 1972.")
 
 ------------------------------------------
 wilma = Person.create!(
@@ -144,10 +139,8 @@ picture: "https://upload.wikimedia.org/wikipedia/en/thumb/5/5e/Lorraine_Hansberr
 
 Cp.create!(country_id: usa.id, person_id: lorraine.id)
 
-bleecker = Place.create!(name_eng: "337 Bleecker Street", name_pl: "337 Bleecker Street", zip: "10014", country_id: usa.id, latitude: 40.701100, longitude: -74.007870)
 
-Pp.create!(country_id: bleecker.id, person_id: lorraine.id, description_eng: "In this house Lorraine Hansberry wrote her famous play 'A Raisin in the Sun'")
-
+Pp.create!(place_id: bleecker.id, person_id: lorraine.id, description_eng: "In this house Lorraine Hansberry wrote her famous play 'A Raisin in the Sun'")
 
 raisin = Event.create!(title_eng: "Lorraine Hansberry's play opens on Broadway making her first African American woman to be produced there.", title_pl: "USA obchodzi Narodowy Dzień Hellen Kellar", description_eng: "Opening on March 11, 1959, A Raisin in the Sun became the first play written by an African American woman to be produced on Broadway. The 29-year-old author became the youngest American playwright and only the fifth woman to receive the New York Drama Critics Circle Award for Best Play. Over the next two years, Raisin was translated into 35 languages and was being performed all over the world", description_pl: " ", mmddyyy: "19590301", year_era_id: 1959, month_id: 3, day_id: 1, month_day_id: 71, read_more_eng: "https://en.wikipedia.org/wiki/Lorraine_Hansberry", read_more_pl: "https://pl.wikipedia.org/wiki/Lorraine_Hansberry", country_id: usa.id)
 
@@ -169,33 +162,43 @@ read_more_pl: "https://pl.wikipedia.org/wiki/Angela_Davis",
 picture: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Angela_Davis_en_Bogotá%2C_Septiembre_de_2010.jpg/220px-Angela_Davis_en_Bogotá%2C_Septiembre_de_2010.jpg"
 )
 
-detention_house = Place.create!(name_eng: "Women’s House of Detention", name_pl: "Zakład karny dla kobiet", zip: "10011", country_id: usa.id, latitude: 40.708850, longitude: -74.007870)
-
-Cp.create!(country_id: usa.id, person_id: angela.id)
-Pp.create!(country_id: detention_house.id, person_id: angela.id, description_eng: "In 1972 Angela Davis was incarcerated in this facility for her political activism. She was released on a $100,000 bail following a global movement emerged to demand freedom, which involved John Lennon, Yoko Ono and the Rolling Stones")
 
 
-# Ep.create!(event_id: radio.id, person_id: eleanor.id)
+Pp.create!(place_id: detention_house.id, person_id: angela.id, description_eng: "In 1972 Angela Davis was incarcerated in this facility for her political activism. She was released on a $100,000 bail following a global movement emerged to demand freedom, which involved John Lennon, Yoko Ono and the Rolling Stones.")
+Pp.create!(place_id: lrei.id, person_id: angela.id, description_eng: "Angela DAvis was accepted to an American Friends Service Committee program, one that put black students from the South into integrated schools in the North. It was through this program that she was placed in Elisabeth Irwin High School, otherwise known at the Little Red School House (LREI), here in Greenwich Village. LREI is regarded as NYC’s first progressive school, created in the early 20th century as a joint public-private experiment in progressive education.")
+
+not_guilty_angela = Event.create!(title_eng: "A trial to determine Angela Davis' involvement in murder was brought to end.", title_pl: "Tu nic nie ma - Angela Davis.", description_eng: "In August 1970 Angela Davis was charged with 'aggravated kidnapping and first degree murder' and was considered a dangerous terrorist by President Nixon. She was incarcerated for 16 months, which gave rise to a global movement to demand her freedom, which involved John Lennon, Yoko Ono and the Rolling Stones. On June 4, 1972, after 13 hours of deliberations, the all-white jury returned a verdict of not guilty following her moving testimony.", description_pl: " ", mmddyyy: "19720604", year_era_id: 1972, month_id: 6, day_id: 4, month_day_id: 156, read_more_eng: "https://en.wikipedia.org/wiki/Angela_Davis", read_more_pl: "https://pl.wikipedia.org/wiki/Angela_Davis", country_id: usa.id)
+
+Et.create!(event_id: not_guilty_angela.id, type_id: 1)
+Ep.create!(event_id: not_guilty_angela.id, person_id: angela.id)
 Cp.create!(country_id: usa.id, person_id: angela.id)
 ------------------------------------------
 
-Person.create!(
+marsha = Person.create!(
 name: "Marsha P. Johnson",
 birth: 1945,
 death: 1992,
-bio_eng: "Marsha P. Johnson was a transgender activist, drag queen, and Stonewall riot instigator.",
-bio_pl: " "
-quote_eng: " ",
-quote_pl: " "
+bio_eng: "Marsha P. Johnson (1945 - 1992) was an American gay liberation activist and self-identified drag queen. Known as an outspoken advocate for gay rights, Johnson was one of the prominent figures in the Stonewall uprising of 1969. A founding member of the Gay Liberation Front, Johnson co-founded the gay and transvestite advocacy organization S.T.A.R. (Street Transvestite Action Revolutionaries), alongside close friend Sylvia Rivera. A popular figure in New York City's gay and art scene, Johnson modeled for Andy Warhol, and performed onstage with the drag performance troupe Hot Peaches. Known for decades as a welcoming presence in the streets of Greenwich Village, Johnson was known as the 'mayor of Christopher Street'. From 1987 through 1992, Johnson was an AIDS activist with ACT UP. In a 1992 interview, Johnson described being the young victim of sexual assault by an adolescent boy. After this, Johnson described the idea of being gay as 'some sort of dream', rather than something that seemed possible, and so chose to remain asexual until leaving for New York City at 17. Johnson's mother reportedly said that being homosexual is like being 'lower than a dog', but Johnson said that her mother was unaware of the LGBT community. At 18 in 1963, she left home for New York City with $15 and a bag of clothes. She waited on tables after moving to Greenwich Village in 1966. After meeting gay people in the city, Johnson finally felt it was possible to be gay and was able to come out. Johnson said she was one of the first drag queens to go to the Stonewall Inn, after they began allowing women and drag queens inside; it was previously a bar for only gay men.",
+bio_pl: " ",
+quote_eng: "I may be crazy, but that don't make me wrong.",
+quote_pl: "Może jestem szalona, ale nie wprowadzaj mnie w błąd.",
 read_more_eng: "https://en.wikipedia.org/wiki/Marsha_P._Johnson",
-read_more_pl: "https://en.wikipedia.org/wiki/Marsha_P._Johnson"
+read_more_pl: "https://en.wikipedia.org/wiki/Marsha_P._Johnson",
 picture: "https://upload.wikimedia.org/wikipedia/en/thumb/3/3c/A_photo_of_Marsha_P._Johnson.png/220px-A_photo_of_Marsha_P._Johnson.png"
 )
-Kraj pochodzenia: USA
-Kraj zamieszkania: USA
 
-Ep.create!(event_id: radio.id, person_id: eleanor.id)
-Cp.create!(country_id: usa.id, person_id: amelia.id)
+Cp.create!(country_id: usa.id, person_id: marsha.id)
+
+
+stonewall_riots = Event.create!(title_eng: "Stonewall Uprising took place in NYC", title_pl: "Tu nic nie ma Stonewall.", description_eng: "In August 1970 Angela Davis was charged with 'aggravated kidnapping and first degree murder' and was considered a dangerous terrorist by President Nixon. She was incarcerated for 16 months, which gave rise to a global movement to demand her freedom, which involved John Lennon, Yoko Ono and the Rolling Stones. On June 4, 1972, after 13 hours of deliberations, the all-white jury returned a verdict of not guilty following her moving testimony.", description_pl: " ", mmddyyy: "19720604", year_era_id: 1969, month_id: 6, day_id: 28, month_day_id: 180, read_more_eng: "https://en.wikipedia.org/wiki/Angela_Davis", read_more_pl: "https://pl.wikipedia.org/wiki/Angela_Davis", country_id: usa.id)
+
+Pp.create!(place_id: stonewall_inn.id, person_id: marsha.id, description_eng: "Marsha P. Johnson has been named, along with Zazu Nova and Jackie Hormona, by a number of the Stonewall veterans as being 'three individuals known to have been in the vanguard' of the pushback against the police at the uprising in 1969.")
+Pp.create!(place_id: stonewall_inn.id, person_id: storme.id, description_eng: "The 1969 Stonewall uprising reportedly started after Stormé DeLarverie fought back against the police officer who attempted to arrest her.")
+
+Et.create!(event_id: stonewall_riots.id, type_id: 2)
+Ep.create!(event_id: stonewall_riots.id, person_id: marsha.id)
+Ep.create!(event_id: stonewall_riots.id, person_id: storme.id)
+
 
 ------------------------------------------
 
@@ -203,19 +206,16 @@ Person.create!(
 name: "Stormé DeLarverie",
 birth: 1920,
 death: 2014,
-bio_eng: "Stormé DeLarverie was a butch lesbian whose scuffle with police was the spark that ignited the Stonewall riots, spurring the crowd to action. She is remembered as a gay civil rights icon and entertainer. ",
-bio_pl: " "
-quote_eng: " ",
-quote_pl: " "
+bio_eng: "Stormé DeLarverie was a butch lesbian whose scuffle with police was the spark that ignited the Stonewall riots, spurring the crowd to action. She is remembered as a gay civil rights icon and entertainer.",
+bio_pl: " ",
+quote_eng: "Age ain't nothing but a number -- if you don't mind it, it don't matter.",
+quote_pl: "Wiek to tylko numer - jeśli nie zwracasz na niego uwagi, nie ma on znaczenia.",
 read_more_eng: "https://en.wikipedia.org/wiki/Stormé_DeLarverie",
-read_more_pl: "https://en.wikipedia.org/wiki/Stormé_DeLarverie"
+read_more_pl: "https://en.wikipedia.org/wiki/Stormé_DeLarverie",
 picture: "https://upload.wikimedia.org/wikipedia/en/thumb/5/5e/Stormé_DeLarverie.jpg/220px-Stormé_DeLarverie.jpg"
 )
-Kraj pochodzenia: USA
-Kraj zamieszkania: USA
 
-Ep.create!(event_id: radio.id, person_id: eleanor.id)
-Cp.create!(country_id: usa.id, person_id: amelia.id)
+Cp.create!(country_id: usa.id, person_id: storme.id)
 
 ------------------------------------------
 
@@ -223,270 +223,223 @@ martha = Person.create!(
 name: "Martha Graham",
 birth: 1894,
 death: 1991,
-bio_eng: "Martha Graham was an American modern dancer and choreographer. Her style, the Graham technique, reshaped American dance and is still taught worldwide.",
-bio_pl: " "
-quote_eng: " ",
-quote_pl: " "
-read_more_eng: "https://en.wikipedia.org/wiki/Martha_Graham#cite_note-TIME-1",
-read_more_pl: "https://pl.wikipedia.org/wiki/Martha_Graham"
+bio_eng: "Martha Graham was an American modern dancer and choreographer. Her style, the Graham technique, reshaped American dance and is still taught worldwide. She danced and taught for over seventy years. Graham was the first dancer to perform at the White House, travel abroad as a cultural ambassador, and receive the highest civilian award of the US: the Presidential Medal of Freedom with Distinction.",
+bio_pl: " ",
+quote_eng: "Nobody cares if you can't dance well. Just get up and dance. Great dancers are great because of their passion.",
+quote_pl: "Nikogo nie obchodzi, czy tańczysz dobrze. Po prostu wstań i zacznij tańczyć. Świetni tancerze są świetni dzięki ich pasji.",
+read_more_eng: "https://en.wikipedia.org/wiki/Martha_Graham",
+read_more_pl: "https://pl.wikipedia.org/wiki/Martha_Graham",
 picture: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Martha_Graham_1948.jpg/220px-Martha_Graham_1948.jpg"
 )
-Kraj pochodzenia: USA
-Kraj zamieszkania: USA
 
-Ep.create!(event_id: radio.id, person_id: eleanor.id)
-Cp.create!(country_id: usa.id, person_id: amelia.id)
+Cp.create!(country_id: usa.id, person_id: martha.id)
+
+martha_school = Event.create!(title_eng: "Martha Graham Center of Contemporary Dance opens its door", title_pl: "Tu nic nie ma Martha Graham.", description_eng: "The Martha Graham Dance Company is the oldest dance company in America, founded in 1926. It has helped develop many famous dancers and choreographers of the 20th and 21st centuries including Erick Hawkins, Anna Sokolow, Merce Cunningham, Lila York, and Paul Taylor.", description_pl: " ", mmddyyy: "19290604", year_era_id: 1969, month_id: 4, day_id: 18, month_day_id: 109, read_more_eng: "https://en.wikipedia.org/wiki/Martha_Graham", read_more_pl: "https://pl.wikipedia.org/wiki/Martha_Graham", country_id: usa.id)
+Ep.create!(event_id: martha_school.id, person_id: martha.id)
+Et.create!(event_id: martha_school.id, type_id: 1)
+
+
+Pp.create!(place_id: martha_school_place.id, person_id: martha.id, description_eng: "The Martha Graham Dance Company is the oldest dance company in America, founded in 1926.")
+
 
 ------------------------------------------
 
-Person.create!(
+miriam = Person.create!(
 name: "Miriam Makeba",
 birth: 1932,
 death: 2008,
-bio_eng: "Zenzile Miriam Makeba, nicknamed Mama Africa, was a South African singer, songwriter, actress, United Nations goodwill ambassador, and civil rights activist. She was an advocate against apartheid and white-minority government in South Africa. Makeba was among the first African musicians to receive worldwide recognition and the first African recording artist to win a Grammy.",
-bio_pl: " "
-quote_eng: " ",
-quote_pl: " "
+bio_eng: "Zenzile Miriam Makeba (1932-2008), nicknamed Mama Africa, was a South African singer, songwriter, actress, United Nations goodwill ambassador, and civil rights activist. She was an advocate against apartheid and white-minority government in South Africa. Makeba was among the first African musicians to receive worldwide recognition and the first African recording artist to win a Grammy. When she first moved to the US, Makeba lived in Greenwich Village, along with other musicians and actors. As was common in her profession, she experienced some financial insecurity, and worked as a babysitter for a period. She first came to popular and critical attention in jazz clubs, after which her reputation grew rapidly.",
+bio_pl: "Południowoafrykańska piosenkarka, znana także jako 'Mama Africa'.",
+quote_eng: "Be careful, think about the effect of what you say. Your words should be constructive, bring people together, not pull them apart.",
+quote_pl: "Myśl o tym, jaki efekt może mieć to, co mówisz. Twoje słowa powinny być konstruktywne, przyciągać razem ludzi, a nie ich od siebie odpychać.",
 read_more_eng: "https://en.wikipedia.org/wiki/Miriam_Makeba",
-read_more_pl: "https://pl.wikipedia.org/wiki/Miriam_Makeba"
+read_more_pl: "https://pl.wikipedia.org/wiki/Miriam_Makeba",
 picture: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Miriam_makeba_01.jpg/260px-Miriam_makeba_01.jpg"
 )
-Kraj pochodzenia: Union of South Africa
-Kraj zamieszkania: Union of South Africa, USA
 
-Ep.create!(event_id: radio.id, person_id: eleanor.id)
-Cp.create!(country_id: usa.id, person_id: amelia.id)
+village_vanguard_makeba = Event.create!(title_eng: "Miriam Makeba debuted in Village Vanguard", title_pl: "Tu nic nie ma Miriam Makeba.", description_eng: "She sang in Xhosa and Zulu, and performed a Yiddish folk song. Her audience at this concert included Miles Davis and Duke Ellington; her performance received strongly positive reviews from critics. She first came to popular and critical attention in jazz clubs, after which her reputation grew rapidly.", description_pl: " ", mmddyyy: "19590712", year_era_id: 1959, month_id: 7, day_id: 12, month_day_id: 109, read_more_eng: "https://en.wikipedia.org/wiki/Martha_Graham", read_more_pl: "https://pl.wikipedia.org/wiki/Martha_Graham", country_id: usa.id)
+
+Pp.create!(place_id: village_vanguard.id, person_id: miriam.id, description_eng: "In 1959 Miriam Makeba debuted here with her songs in Xhosa and Zulu.")
+
+Et.create!(event_id: village_vanguard_makeba.id, type_id: 1)
+Ep.create!(event_id: village_vanguard_makeba.id, person_id: miriam.id)
+Cp.create!(country_id: usa.id, person_id: miriam.id)
+Cp.create!(country_id: rpa.id, person_id: miriam.id)
 
 ------------------------------------------
 
-Person.create!(
+dorris = Person.create!(
 name: "Doris Humpray",
 birth: 1895,
 death: 1958,
-bio_eng: "Doris Humphrey was an American dancer and choreographer. Humphrey was one of the second generation modern dance pioneers who followed their forerunners in exploring the use of breath and developing techniques still taught today. As many of her works were annotated, Humphrey continues to be taught, studied and performed.",
-bio_pl: " "
-quote_eng: " ",
-quote_pl: " "
+bio_eng: "Doris Humphrey (1895-1958) was an American dancer and choreographer. Humphrey was one of the second generation modern dance pioneers who followed their forerunners in exploring the use of breath and developing techniques still taught today. As many of her works were annotated, Humphrey continues to be taught, studied and performed.",
+bio_pl: " ",
+quote_eng: "There are times when the simple dignity of movement can fulfill the function of a volume of words.",
+quote_pl: "Są momenty, w których zwyczajna godność ruchu potrafi pełnić funkcję słów.",
 read_more_eng: "https://en.wikipedia.org/wiki/Doris_Humphrey",
-read_more_pl: "https://en.wikipedia.org/wiki/Doris_Humphrey"
+read_more_pl: "https://en.wikipedia.org/wiki/Doris_Humphrey",
 picture: "http://www.artnet.com/WebServices/images/ll00159lldEPaFFg2bECfDrCWvaHBOc8PF/barbara-morgan-doris-humphrey---to-the-dance.jpg"
 )
-Kraj pochodzenia: USA
-Kraj zamieszkania: USA
 
-Ep.create!(event_id: radio.id, person_id: eleanor.id)
-Cp.create!(country_id: usa.id, person_id: amelia.id)
+Cp.create!(country_id: usa.id, person_id: dorris.id)
 
 ------------------------------------------
 
-Person.create!(
+lorena = Person.create!(
 name: "Lorena Hickok",
 birth: 1893,
 death: 1968,
-bio_eng: " ",
-bio_pl: " "
-quote_eng: ""Given courage and ability and a favorable set of circumstances, there is no greater way to [acquire] influence than to be free of personal ambition." ",
-quote_pl: ""
+bio_eng: "Lorena Alice 'Hick' Hickok (1893 – 1968) was an American journalist. Born in East Troy, Wisconsin, Hickok had an unhappy childhood marked by isolation and abuse. After her mother's death when Hickok was thirteen, she left home, worked on her own, and completed high school with the help of a cousin. She went into journalism after failing out of college, and soon became a successful reporter for the Minneapolis Tribune and the Associated Press (AP), achieving several firsts for American women journalists. By 1932, she had become the nation's best-known female reporter. After being assigned to cover Roosevelt during her husband's first presidential campaign, Hickok struck up a close relationship with the soon-to-be First Lady. For several years, the two corresponded almost every day, traveled together, and professed emotional and physical affection for one another. Late in life, Hickok wrote several books. She co-authored Ladies of Courage with Eleanor Roosevelt in 1954.[49] This was followed by The Story of Franklin D. Roosevelt (1956), The Story of Helen Keller (1958), The Story of Eleanor Roosevelt (1959), and several more.",
+bio_pl: " ",
+quote_eng: "Given courage and ability and a favorable set of circumstances, there is no greater way to acquire influence than to be free of personal ambition.",
+quote_pl: " ",
 read_more_eng: "https://en.wikipedia.org/wiki/Lorena_Hickok",
-read_more_pl: "https://en.wikipedia.org/wiki/Lorena_Hickok"
+read_more_pl: "https://en.wikipedia.org/wiki/Lorena_Hickok",
 picture: "https://timedotcom.files.wordpress.com/2016/03/hickok.jpeg"
 )
-Kraj pochodzenia: USA
-Kraj zamieszkania: USA
 
-Ep.create!(event_id: radio.id, person_id: eleanor.id)
-Cp.create!(country_id: usa.id, person_id: amelia.id)
+Cp.create!(country_id: usa.id, person_id: lorena.id)
 
 ------------------------------------------
 
-------------------------------------------
-
-Person.create!(
+helen = Person.create!(
 name: "Helen Tamaris",
 birth: 1905,
 death: 1966,
-bio_eng: "Helen Tamiris was an American choreographer, modern dancer, and teacher. Much of her known works deal with social issues like racism and war.  Helen Tamiris was Jewish and she choreographed some pieces with themes that reflected her heritage in this regard.",
-bio_pl: " "
-quote_eng: " ",
-quote_pl: " "
-read_more_eng: "https://en.wikipedia.org/wiki/Helen_Tamiris",
-read_more_pl: "https://en.wikipedia.org/wiki/Helen_Tamiris"
+bio_eng: "Helen Tamiris was an American choreographer, modern dancer, and teacher. Much of her known works deal with social issues like racism and war. Helen Tamiris was Jewish and she choreographed some pieces with themes that reflected her heritage in this regard.",
+bio_pl: " ",
+quote_eng: "Art is international but the artist is a product of a nationality. … There are no general rules. Each original work of art creates its own code.",
+quote_pl: " ",
+read_more_eng: "https://jwa.org/encyclopedia/article/tamiris-helen",
+read_more_pl: "https://en.wikipedia.org/wiki/Helen_Tamiris",
 picture: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Helen_Tamiris_NYWTS.jpg/220px-Helen_Tamiris_NYWTS.jpg"
 )
-Kraj pochodzenia: USA
-Kraj zamieszkania: USA
 
-Ep.create!(event_id: radio.id, person_id: eleanor.id)
-Cp.create!(country_id: usa.id, person_id: amelia.id)
+Cp.create!(country_id: usa.id, person_id: helen.id)
 
 ------------------------------------------------------------------------------------
 
-Person.create!(
+katherine = Person.create!(
 name: "Katherine Dunham",
 birth: 1909,
 death: 2006,
-bio_eng: "Katherine Dunham was an African-American dancer, choreographer, author, educator, anthropologist, and social activist. She directed her own dance company for many years. She has been called the "matriarch and queen mother of black dance."",
-bio_pl: ""
-quote_eng: "I used to want the words "She tried" on my tombstone. Now I want "She did it."",
-quote_pl: " "
+bio_eng: "Katherine Dunham (1909-2006) was an African-American dancer, choreographer, author, educator, anthropologist, and social activist. She directed her own dance company for many years. She has been called the 'matriarch and queen mother of black dance.'",
+bio_pl: " ",
+quote_eng: "I used to want the words 'She tried' on my tombstone. Now I want'She did it.'",
+quote_pl: " ",
 read_more_eng: "https://en.wikipedia.org/wiki/Katherine_Dunham",
-read_more_pl: "https://en.wikipedia.org/wiki/Katherine_Dunham"
+read_more_pl: "https://en.wikipedia.org/wiki/Katherine_Dunham",
 picture: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Katherine_Dunham.jpg/220px-Katherine_Dunham.jpg"
 )
-Kraj pochodzenia: USA
-Kraj zamieszkania: USA
 
-Ep.create!(event_id: radio.id, person_id: eleanor.id)
-Cp.create!(country_id: usa.id, person_id: amelia.id)
+Cp.create!(country_id: usa.id, person_id: katherine.id)
 
 ------------------------------------------------------------------------------------
 
-Person.create!(
+maria = Person.create!(
 name: "Maria Skłodowska-Curie",
 birth: 1867,
 death: 1934,
-bio_eng: "Marie Skłodowska Curie was a Polish physicist and chemist who conducted pioneering research on radioactivity. She was the first woman to win a Nobel Prize, the first person and only woman to win the Nobel prize twice, and the only person to win the Nobel Prize in two different scientific fields.",
-bio_pl: "Maria Skłodowska Curie była polską fizyczką i chemiczką, która prowadziła pionierskie badania nad radioaktywnością. Była pierwszą kobietą, która dostała Nagrodę Nobla, pierwszą osobą i jedyną kobietą, która dwukrotnie zdobyła nagrodę Nobla, i jedyną osobą, która zdobyła Nagrodę Nobla w dwóch różnych dziedzinach ścisłych."
-quote_eng: " ",
-quote_pl: " "
+bio_eng: "Marie Skłodowska Curie (1867-1934) was a Polish physicist and chemist who conducted pioneering research on radioactivity. She was the first woman to win a Nobel Prize, the first person and only woman to win the Nobel prize twice, and the only person to win the Nobel Prize in two different scientific fields.",
+bio_pl: "Maria Skłodowska Curie była polską fizyczką i chemiczką, która prowadziła pionierskie badania nad radioaktywnością. Była pierwszą kobietą, która dostała Nagrodę Nobla, pierwszą osobą i jedyną kobietą, która dwukrotnie zdobyła nagrodę Nobla, i jedyną osobą, która zdobyła Nagrodę Nobla w dwóch różnych dziedzinach ścisłych.",
+quote_eng: "One should be afraid of nothing. One should understand everything.",
+quote_pl: "Niczego w życiu nie należy się bać, należy to tylko zrozumieć.",
 read_more_eng: "https://en.wikipedia.org/wiki/Marie_Curie",
-read_more_pl: "https://pl.wikipedia.org/wiki/Maria_Skłodowska-Curie"
+read_more_pl: "https://pl.wikipedia.org/wiki/Maria_Skłodowska-Curie",
 picture: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Marie_Curie_c1920.jpg/220px-Marie_Curie_c1920.jpg"
 )
-Kraj pochodzenia: Polska
-Kraj zamieszkania: Polska, Francja
 
-Ep.create!(event_id: radio.id, person_id: eleanor.id)
-Cp.create!(country_id: usa.id, person_id: amelia.id)
+Cp.create!(country_id: poland.id, person_id: maria.id)
+Cp.create!(country_id: france.id, person_id: maria.id)
+
+
+polonium = Event.create!(title_eng: "Maria Skłodowska-Curie announces her discovery", title_pl: "Tu nic nie ma Maria Skłodowska-Curie.", description_eng: "Maria Skłodowska-Curie and her husband published a joint paper announcing the existence of an element which they named 'polonium', in honour of her native Poland", description_pl: " ", mmddyyy: "19590712", year_era_id: 1898, month_id: 7, day_id: 11, month_day_id: 193, read_more_eng: "https://en.wikipedia.org/wiki/Marie_Curie", read_more_pl: "https://pl.wikipedia.org/wiki/Maria_Skłodowska-Curie", country_id: poland.id)
+Ep.create!(event_id: polonium.id, person_id: maria.id)
+Et.create!(event_id: polonium.id, type_id: 1)
+
+
 
 ------------------------------------------------------------------------------------
 
-Person.create!(
+kazimiera = Person.create!(
+name: "Kazimiera Bujwidowa",
+birth: 1867,
+death: 1934,
+bio_eng: "Kazimiera Bujwidowa (1867-1932) was a feminist activist from Cracow. She established reading rooms and libraries for women and youth. Thanks to her, Poland's Jagiellonian University accepted the first female students. She was close friends with Maria Skłodowska-Curie, both connected by their women's rights activism.",
+bio_pl: "Kazimiera Bujwidowa (1867–1932) – krakowska feministka; dzięki jej działaniom Uniwersytet Jagielloński przyjął pierwsze kobiety na studia, a dziewczyny mogły zdawać maturę; założyła Czytelnię dla kobiet.",
+quote_eng: "I live because I want to live and not because I have to. I live as I want and never as I have to.",
+quote_pl: "Żyję - bo chcę żyć, a nigdy, bo muszę i żyję tak, jak chcę, a nigdy tak, jak muszę!",
+read_more_eng: "https://en.wikipedia.org/wiki/Kazimiera_Bujwidowa",
+read_more_pl: "https://pl.wikipedia.org/wiki/Kazimiera_Bujwidowa",
+picture: "https://en.wikipedia.org/wiki/Kazimiera_Bujwidowa#/media/File:Kazimiera_Bujwidowa_Polish_womens_rights.jpg"
+)
+
+Cp.create!(country_id: poland.id, person_id: kazimiera.id)
+
+---------------------------------------------------
+
+annie = Person.create!(
 name: "Annie Leibovitz",
 birth: 1949,
 death: nil,
-bio_eng: "Anna-Lou "Annie" Leibovitz is a portrait photographer. She is best known for her engaging portraits—particularly of celebrities—which often feature subjects in intimate settings and poses. She became the first woman to hold an exhibition at Washington's National Portrait Gallery.",
-bio_pl: " "
-quote_eng: " ",
-quote_pl: " "
+bio_eng: "Anna-Lou 'Annie' (born 1949) Leibovitz is a portrait photographer. She is best known for her engaging portraits—particularly of celebrities—which often feature subjects in intimate settings and poses. She became the first woman to hold an exhibition at Washington's National Portrait Gallery.",
+bio_pl: " ",
+quote_eng: "I don't think I could give advice to my younger self because she probably wouldn't listen.",
+quote_pl: " ",
 read_more_eng: "https://en.wikipedia.org/wiki/Annie_Leibovitz",
-read_more_pl: "https://pl.wikipedia.org/wiki/Annie_Leibovitz"
+read_more_pl: "https://pl.wikipedia.org/wiki/Annie_Leibovitz",
 picture: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Annie_Leibovitz-SF-1-Crop.jpg/450px-Annie_Leibovitz-SF-1-Crop.jpg"
 )
-Kraj pochodzenia: USA
-Kraj zamieszkania: USA
 
-Ep.create!(event_id: radio.id, person_id: eleanor.id)
-Cp.create!(country_id: usa.id, person_id: amelia.id)
+Cp.create!(country_id: usa.id, person_id: annie.id)
 
 
 ------------------------------------------
 # CONNECTIONS:
 
 Connection.create!(relationship: "romantic", person_one_id: susan.id, person_two_id: annie.id)
+
 Connection.create!(relationship: "friendship", person_one_id: nina.id, person_two_id: lorraine.id)
+Connection.create!(relationship: "friendship", person_one_id: nina.id, person_two_id: miriam.id)
 
 Connection.create!(relationship: "friendship", person_one_id: gloria.id, person_two_id: angela.id)
 Connection.create!(relationship: "collaboration", person_one_id: gloria.id, person_two_id: dorothy.id)
 Connection.create!(relationship: "friendship", person_one_id: gloria.id, person_two_id: wilma.id)
 
 Connection.create!(relationship: "friendship", person_one_id: martha.id, person_two_id: hellen.id)
+Connection.create!(relationship: "friendship", person_one_id: dorris.id, person_two_id: martha.id)
+Connection.create!(relationship: "friendship", person_one_id: helen.id, person_two_id: martha.id)
+Connection.create!(relationship: "friendship", person_one_id: katherine.id, person_two_id: martha.id)
+
+
+Connection.create!(relationship: "friendship", person_one_id: marsha.id, person_two_id: storme.id)
+
+Connection.create!(relationship: "friendship", person_one_id: maria.id, person_two_id: kazimiera.id)
+
+
+Connection.create!(relationship: "romantic", person_one_id: lorena.id, person_two_id: eleanor.id)
 
 
 
+--------------------------------
+Pp.create!(place_id: martha_school_place.id, person_id: martha.id, description_eng: "The Martha Graham Dance Company is the oldest dance company in America, founded in 1926.")
 
+Pp.create!(place_id: stonewall_inn.id, person_id: marsha.id, description_eng: "Marsha P. Johnson has been named, along with Zazu Nova and Jackie Hormona, by a number of the Stonewall veterans as being 'three individuals known to have been in the vanguard' of the pushback against the police at the uprising in 1969.")
 
+Pp.create!(place_id: stonewall_inn.id, person_id: storme.id, description_eng: "The 1969 Stonewall uprising reportedly started after Stormé DeLarverie fought back against the police officer who attempted to arrest her.")
 
+Pp.create!(place_id: nycacs.id, person_id: dorothy.id, description_eng: "Dorothy Pitman Hughes co-founded the New York City Agency for Child Development in 1972.")
 
-DATY LIPIEC
+Pp.create!(place_id: detention_house.id, person_id: angela.id, description_eng: "In 1972 Angela Davis was incarcerated in this facility for her political activism. She was released on a $100,000 bail following a global movement emerged to demand freedom, which involved John Lennon, Yoko Ono and the Rolling Stones.")
 
-in July 1898, Curie and her husband published a joint paper announcing the existence of an element which they named "polonium", in honour of her native Poland,
+Pp.create!(place_id: lrei.id, person_id: angela.id, description_eng: "Angela DAvis was accepted to an American Friends Service Committee program, one that put black students from the South into integrated schools in the North. It was through this program that she was placed in Elisabeth Irwin High School, otherwise known at the Little Red School House (LREI), here in Greenwich Village. LREI is regarded as NYC’s first progressive school, created in the early 20th century as a joint public-private experiment in progressive education.")
 
+Pp.create!(place_id: bleecker.id, person_id: lorraine.id, description_eng: "In this house Lorraine Hansberry wrote her famous play 'A Raisin in the Sun'")
 
+Pp.create!(place_id: cuny.id, person_id: susan.id, description_eng: "Susan Sontag taught philosophy at CUNY from 1960 to 1964")
 
+Pp.create!(place_id: julliard.id, person_id: nina.id, description: "Nina Simone studied classical piano at Julliard School")
 
-CYTATY:
+Pp.create!(place_id: barbados.id, person_id: nina.id, description_eng: "Simone left the US in September 1970, flying to Barbados as she was disappointed that she was not making the Hits like she used to. Upon her arrival back to the US, Simone’s previous protest for the country’s involvement in the Vietnam War meant she was issued with a Warrent for her arrest as she had not paid her taxes. To evade the authorities and prosecution, Simone stayed in Barbados for quite some time.")
 
-
-Marsha P. Johnson:
-"I may be crazy, but that don't make me wrong."
-Storme:
-"Age ain't nothing but a number -- if you don't mind it, it don't matter" [source: http://www.stonewallvets.org/StormeDeLarverie.htm]
-Martha Graham:
-"Nobody cares if you can't dance well. Just get up and dance. Great dancers are great because of their passion."
-"What people in the world think of you is really none of your business."
-"Great dancers are not great because of their technique, they are great because of their passion. "
-
-
-Miriam Makeba:
-Be careful, think about the effect of what you say. Your words should be constructive, bring people together, not pull them apart.
-Maria Skłodowska-Curie:
-- Niczego w życiu nie należy się bać, należy to tylko zrozumieć.
-- Nie można bowiem mieć nadziei na skierowanie świata ku lepszym drogom, o ile się jednostek nie skieruje ku lepszemu. W tym celu każdy z nas powinien pracować nad udoskonaleniem się własnym, jednocześnie zdając sobie sprawę ze swej, osobistej odpowiedzialności za całokształt tego, co się dzieje w świecie, i z tego, że obowiązkiem bezpośrednim każdego z nas jest dopomagać tym, którym możemy się stać najbardziej użyteczni.
-
-
-Annie Leibovitz:
-"I'm more interested in being good than being famous."
-I don't think I could give advice to my younger self because she probably wouldn't listen.
-I didn't want to let women down. One of the stereotypes I see breaking is the idea of aging and older women not being beautiful.
-
--------------------------------------
-Stonewall Inn
-53 Chistopher Street
-
-Police have routinely raided places where Lesbian, Gay, Bisexual, Two
-Spirit, Trans and Gender Non-Conforming people congregate. On June
-28, 1969, when the police began making arrests at the Stonewall Inn,
-the people fought back. Trans women of color, including Miss Major,
-Marsha P. Johnson, and Sylvia Rivera played a pivotal role in the
-Stonewall Rebellion, which sparked a massive movement. Those
-imprisoned a block away at New York Women's House of Detention
-expressed solidarity with those in the street below. LREI, founded in
-1921 by the politically active lesbian Elisabeth Irwin, has long served
-a place of refuge for queer families, teachers, and students. It was the
-first school to march in the city’s Pride Parade. The youngest children
-philosophize about family structure over playdough and try on various
-genders and sexualities in dramatic play. The older students formally
-study intersectional feminism with the legendary Ileana Jiménez.
-
-
--------------------------------------------------
-Travers Residence
-39 Charlton Street
-Mary Travers was born to progressive journalists Robert Travers and
-Virginia Coigney. Both were active organizers with the Newspaper Guild.
-Virginia wrote a biography of fellow Village resident Margaret Sanger,
-the founder of Planned Parenthood. When Margaret was prosecuted under
-the Comstock Act for her writing about birth control, she fled the country.
-While Margaret was a fugitive, her children were cared for by Elisabeth
-Irwin’s friends, Caroline Pratt, founder of City and Country School, and
-Helen Marot, prominent writer and labor organizer.
-At LREI, Mary studied music with Charity Bailey during her younger
-years and sang in Bob De Cormier’s chorus in high school. Music was
-alive throughout the neighborhood. Pete Seeger, who lived at 129
-MacDougal Street, regularly stopped by the school to play, where his wife
-Toshi had been a student. Woody Guthrie, whose first apartment in the
-city was at 74 Charles Street, sent his kids to the school. Woody’s “This
-Land is Your Land” became and remains to this day the de facto school
-song.
-Soon Mary, along with three other LREI friends and musicians who
-played around Washington Square Park, joined the Song Swappers. The
-group accompanied Pete on four albums, including Talking Union and
-Other Union Songs. Peter, Paul, and Mary performed together for the first
-time in 1961 at the Bitter End at 147 Bleecker Street. Bob De Cormier,
-Mary’s teacher at LREI, served as the musical director for the group as
-well as for Harry Belafonte.
-Peter, Paul, and Mary were ardently political. During the 1963 March
-on Washington, where Dr. King delivered his “I Have a Dream” speech,
-they played “If I Had a Hammer” and “Blowin’ In The Wind” from the
-steps of the Lincoln Memorial. Bob Dylan, who would become an LREI
-parent while living at 94 MacDougal Street, also performed that day.
-In 1965, the group performed for those marching from Selma to
-Montgomery. In 1968, they played a fundraiser for Cesar Chavez, Dolores
-Huerta, and the United Farm Workers in the midst of the Delano grape
-strike and solidarity grape boycott. During the 1967 Stop the Draft Week,
-the group performed at the culminating march to the Pentagon. In 1984,
-Mary along with her mother Virginia and daughter Alicia were arrested in
-DC protesting South African apartheid. In 1995, the group played at Kent
-State to honor the memory of the students killed there by the National
-Guard a quarter century earlier.
+Pp.create!(place_id: village_vanguard.id, person_id: miriam.id, description_eng: "In 1959 Miriam Makeba debuted here with her songs in Xhosa and Zulu.")
