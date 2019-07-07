@@ -10,7 +10,6 @@ has_many :eps
 has_many :events, :through => :eps
 
 validates :name, presence: true
-validates :death, presence: true
 validates :birth, presence: true
 validates :bio_eng, presence: true
 end

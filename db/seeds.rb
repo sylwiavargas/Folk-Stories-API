@@ -67,7 +67,7 @@ europe = Continent.create!(name_eng: "Europe", name_pl: "Europa")
 usa = Country.create!(name_eng: "USA", name_pl: "USA", continent_id: north_am.id)
 
 ################# PLACES ###############
-nyc = Place.create!(name_eng: "New York City", name_pl: "Nowy Jork", zip: 10001, country_id: usa.id, latitude: 40.7128, longitude: 74.0060)
+nyc = Place.create!(name_eng: "New York City", name_pl: "Nowy Jork", zip: 10001, country_id: usa.id, latitude: 40.7128, longitude: -74.0060)
 
 ################ DAYS ##################
 
