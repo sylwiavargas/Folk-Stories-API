@@ -307,9 +307,9 @@ wilma = Person.create!(
 
 
   ################# CONNECTIONS ###############
-  Connection.create!(relationship: "romantic", person_one_id: eleanor.id, person_two_id: amelia.id)
   Connection.create!(relationship: "romantic", person_one_id: susan.id, person_two_id: annie.id)
-  Connection.create!(relationship: "romantic", person_one_id: lorena.id, person_two_id: eleanor.id)
+  Connection.create!(relationship: "romantic", person_one_id: eleanor.id, person_two_id: lorena.id)
+  Connection.create!(relationship: "romantic", person_one_id: eleanor.id, person_two_id: amelia.id)
 
   Connection.create!(relationship: "friendship", person_one_id: nina.id, person_two_id: lorraine.id)
   Connection.create!(relationship: "friendship", person_one_id: nina.id, person_two_id: miriam.id)
@@ -319,9 +319,9 @@ wilma = Person.create!(
   Connection.create!(relationship: "friendship", person_one_id: gloria.id, person_two_id: wilma.id)
 
   Connection.create!(relationship: "friendship", person_one_id: martha.id, person_two_id: hellen.id)
-  Connection.create!(relationship: "friendship", person_one_id: dorris.id, person_two_id: martha.id)
-  Connection.create!(relationship: "friendship", person_one_id: helen.id, person_two_id: martha.id)
-  Connection.create!(relationship: "friendship", person_one_id: katherine.id, person_two_id: martha.id)
+  Connection.create!(relationship: "friendship", person_one_id: martha.id, person_two_id: dorris.id)
+  Connection.create!(relationship: "friendship", person_one_id: martha.id, person_two_id: helen.id)
+  Connection.create!(relationship: "friendship", person_one_id: martha.id, person_two_id: katherine.id)
 
   Connection.create!(relationship: "friendship", person_one_id: marsha.id, person_two_id: storme.id)
 
