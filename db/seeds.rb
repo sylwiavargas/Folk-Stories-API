@@ -305,11 +305,54 @@ wilma = Person.create!(
   picture: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Annie_Leibovitz-SF-1-Crop.jpg/450px-Annie_Leibovitz-SF-1-Crop.jpg"
   )
 
+  ludmila = Person.create!(
+  name: "Lyudmila Pavlichenko",
+  birth: 1916,
+  death: 1974,
+  bio_eng: "Lyudmila Mikhailovna Pavlichenko (née Belova; 1916-1974) aka 'Lady Death' was a Soviet sniper in the Red Army during World War II, credited with 309 kills of the nazis. She is regarded as one of the top military snipers of all time and the most successful female sniper in history.",
+  bio_pl: " ",
+  quote_eng: "When a neighbor’s boy boasted of his exploits at a shooting range, I set out to show that a girl could do as well. So I practiced a lot.",
+  quote_pl: " ",
+  read_more_eng: "https://www.smithsonianmag.com/history/eleanor-roosevelt-and-the-soviet-sniper-23585278/",
+  read_more_pl: "https://pl.wikipedia.org/wiki/Ludmi%C5%82a_Pawliczenko",
+  picture: "https://upload.wikimedia.org/wikipedia/commons/1/1b/Lyudmila_Pavlichenko%2C_before_title.png"
+  )
+
+  caroline = Person.create!(
+  name: "Caroline Duby Glassman",
+  birth: 1922,
+  death: 2013,
+  bio_eng: "Caroline Duby Glassman (1922-2013) was an American attorney and a jurist in the state of Maine. In 1983, she became the first woman to serve on the Maine Supreme Judicial Court. Caroline then entered law school at Willamette University College of Law in Salem, Oregon, where she was one of only two women at the school. Both her father and the dean discouraged her from attending the school. Glassman worked as a waitress to put herself through law school and graduated summa cum laude. Still, she was offered only a legal secretary position after passing the bar in Oregon. Glassman’s appointment to the Supreme Court – there were three female trial judges at the time – made her a role model and mentor for many women in the legal profession.",
+  bio_pl: " ",
+  quote_eng: " ",
+  quote_pl: " ",
+  read_more_eng: "https://en.wikipedia.org/wiki/Caroline_Duby_Glassman",
+  read_more_pl: "https://pl.wikipedia.org/wiki/Ludmi%C5%82a_Pawliczenko",
+  picture: "https://en.wikipedia.org/wiki/File:Caroline_Duby_Glassman.jpg#/media/File:Caroline_Duby_Glassman.jpg"
+  )
+
+  leigh = Person.create!(
+  name: "Leigh Saufley",
+  birth: 1954,
+  death: nil,
+  bio_eng: "Leigh Ingalls Saufley (born June 21, 1954) is the Chief Justice of the Maine Supreme Judicial Court. Saufley graduated from the University of Maine in 1976. She was a member of Phi Beta Kappa. She earned her J.D. degree from the University of Maine School of Law in 1980 and served as a deputy attorney general until 1990, when she was named to the Maine District Court. On December 6, 2001, she was sworn in as Maine's first female Chief Justice of the Supreme Judicial Court, Caroline Duby Glassman.",
+  bio_pl: " ",
+  quote_eng: " ",
+  quote_pl: " ",
+  read_more_eng: "https://en.wikipedia.org/wiki/Leigh_Saufley",
+  read_more_pl: " ",
+  picture: "https://bdn-data.s3.amazonaws.com/uploads/2012/02/State-of-Judiciary-600x832.jpg"
+  )
+
 
   ################# CONNECTIONS ###############
   Connection.create!(relationship: "romantic", person_one_id: susan.id, person_two_id: annie.id)
+
+  Connection.create!(relationship: "collaboration", person_one_id: leigh.id, person_two_id: caroline.id)
+
   Connection.create!(relationship: "romantic", person_one_id: eleanor.id, person_two_id: lorena.id)
   Connection.create!(relationship: "romantic", person_one_id: eleanor.id, person_two_id: amelia.id)
+  Connection.create!(relationship: "romantic", person_one_id: eleanor.id, person_two_id: ludmila.id)
 
   Connection.create!(relationship: "friendship", person_one_id: nina.id, person_two_id: lorraine.id)
   Connection.create!(relationship: "friendship", person_one_id: nina.id, person_two_id: miriam.id)
@@ -332,14 +375,22 @@ wilma = Person.create!(
   north_am = Continent.create!(name_eng: "North America", name_pl: "Ameryka Północna")
   europe = Continent.create!(name_eng: "Europe", name_pl: "Europa")
   africa = Continent.create!(name_eng: "Africa", name_pl: "Afryka")
+  asia = Continent.create!(name_eng: "Asia", name_pl: "Azja")
+  australia = Continent.create!(name_eng: "Australia and Oceania", name_pl: "Australia i Oceania")
+
 
 
   ################# COUNTRIES ###############
   usa = Country.create!(name_eng: "USA", name_pl: "USA", continent_id: north_am.id)
   france = Country.create!(name_eng: "France", name_pl: "Francja", continent_id: europe.id)
+  germany = Country.create!(name_eng: "Germany", name_pl: "Niemcy", continent_id: europe.id
   poland = Country.create!(name_eng: "Poland", name_pl: "Polska", continent_id: europe.id)
   barb_country = Country.create!(name_eng: "Barbados", name_pl: "Barbados", continent_id: north_am.id)
   rpa = Country.create!(name_eng: "South Africa", name_pl: "RPA", continent_id: africa.id)
+  russia = Country.create!(name_eng: "Russia", name_pl: "Rosja", continent_id: asia.id)
+  ukraine = Country.create!(name_eng: "Ukraine", name_pl: "Ukraina", continent_id: asia.id)
+  nz = Country.create!(name_eng: "New Zeland", name_pl: "Nowa Zelandia", continent_id: australia.id)
+  egypt = Country.create!(name_eng: "Egypt", name_pl: "Egipt", continent_id: africa.id)
 
 
   ################# PLACES ###############
@@ -364,6 +415,9 @@ wilma = Person.create!(
 
   village_vanguard = Place.create!(name_eng: "Village Vanguard (jazz club)", name_pl: "Village Vanguard (klub jazzowy)", zip: 10014, country_id: usa.id, latitude: 40.733210, longitude: -74.003020)
 
+  sevastopol = Place.create!(name_eng: "Sevastopol", name_pl: "Sewastopol", zip: 99000, country_id: ukraine.id, latitude: 44.6054434, longitude: 33.5220842)
+
+  moscow = Place.create!(name_eng: "Moscow", name_pl: "Moskwa", zip: 99000, country_id: russia.id, latitude: 55.751244, longitude: 37.618423)
 
   ################ DAYS ##################
 
@@ -485,7 +539,7 @@ wilma = Person.create!(
 
   ms = Event.create!(title_eng: "The first Ms. Magazine issue is published!", title_pl: "Pierwsze wydanie Ms. Magazine", description_eng: "Gloria Steinem and Dorothy Pitman Hughes published Ms. Magazine as an insert in New York Magazine. The cover depicts a woman resembling an Indian goddess, with blue skin and eight arms, holding a clock, skillet, typewriter, rake, mirror, telephone, steering wheel, and an iron. 300,000 test copies of the magazine sold out in three days, and generated 26,000 subscription orders within the next few weeks. Gloria Steinem and Letty Cottin Pogrebin co-founded Ms.Magazine in 1972, during the Second-Wave feminist movement. At the time Ms. was first published, much of the feminist movement was driven toward fighting against the social and family-life norms expected of women.", description_pl: " ", mmddyyy: "19711201", year_era_id: 1971, month_id: 12, day_id: 1, month_day_id: 336, read_more_eng: "https://en.wikipedia.org/wiki/Ms._(magazine)", read_more_pl: "https://pl.wikipedia.org/wiki/Ms.", place_id: nyc.id, country_id: usa.id)
 
-  village_vanguard_makeba = Event.create!(title_eng: "Miriam Makeba debuted in Village Vanguard", title_pl: "Tu nic nie ma Miriam Makeba.", description_eng: "She sang in Xhosa and Zulu, and performed a Yiddish folk song. Her audience at this concert included Miles Davis and Duke Ellington; her performance received strongly positive reviews from critics. She first came to popular and critical attention in jazz clubs, after which her reputation grew rapidly.", description_pl: " ", mmddyyy: "19590712", year_era_id: 1959, month_id: 7, day_id: 12, month_day_id: 194, read_more_eng: "https://en.wikipedia.org/wiki/Martha_Graham", read_more_pl: "https://pl.wikipedia.org/wiki/Martha_Graham", country_id: usa.id)
+  village_vanguard_makeba = Event.create!(title_eng: "Miriam Makeba debuted in Village Vanguard", title_pl: "Tu nic nie ma Miriam Makeba.", description_eng: "She sang in Xhosa and Zulu, and performed a Yiddish folk song. Her audience at this concert included Miles Davis and Duke Ellington; her performance received strongly positive reviews from critics. She first came to popular and critical attention in jazz clubs, after which her reputation grew rapidly.", description_pl: " ", mmddyyy: "19590712", year_era_id: 1959, month_id: 7, day_id: 13, month_day_id: 194, read_more_eng: "https://en.wikipedia.org/wiki/Martha_Graham", read_more_pl: "https://pl.wikipedia.org/wiki/Martha_Graham", country_id: usa.id)
 
   hkd = Event.create!(title_eng: "National Helen Keller Day", title_pl: "USA obchodzi Narodowy Dzień Hellen Kellar", description_eng: "Helen Keller Day is a commemorative holiday to celebrate the birth of Helen Keller, observed on June 27 annually. The holiday observance was created by presidential proclamation in 1980, as well as by international organizations, particularly those helping the blind and the deaf. The holiday is generally known for its fashion show held on June 27 annually for fundraising purposes.", description_pl: " ", mmddyyy: "19711201", year_era_id: 1960, month_id: 6, day_id: 27, month_day_id: 179, read_more_eng: "https://en.wikipedia.org/wiki/Helen_Keller_Day", read_more_pl: "https://en.wikipedia.org/wiki/Helen_Keller_Day", country_id: usa.id)
 
@@ -499,12 +553,142 @@ wilma = Person.create!(
 
   polonium = Event.create!(title_eng: "Maria Skłodowska-Curie announces her discovery", title_pl: "Tu nic nie ma Maria Skłodowska-Curie.", description_eng: "Maria Skłodowska-Curie and her husband published a joint paper announcing the existence of an element which they named 'polonium', in honour of her native Poland", description_pl: " ", mmddyyy: "19590712", year_era_id: 1898, month_id: 7, day_id: 11, month_day_id: 193, read_more_eng: "https://en.wikipedia.org/wiki/Marie_Curie", read_more_pl: "https://pl.wikipedia.org/wiki/Maria_Skłodowska-Curie", country_id: poland.id)
 
+  ludmila_birth = Event.create!(title_eng: "Birth of Lyudmila Pavlichenko ",
+  title_pl: " Urodziny Ludmiły Pawliczenko",
+  description_eng: " Lyudmila Pavlichenko up to this day is regarded as one of the top military snipers of all time and the best and most successful female sniper in history. ",
+  description_pl: "Ludmiła Pawliczenko aż do dzisiaj jest uważana za jedną z najlepszych wojskowych snajperek wszech czasów oraz kobietą-snajperką, która odniosła największe sukcesy. ",
+  mmddyyy: "19160712",
+  year_era_id: 1916 ,
+  month_id: 7,
+  day_id: 12,
+  month_day_id: 194,
+  read_more_eng: "https://www.smithsonianmag.com/history/eleanor-roosevelt-and-the-soviet-sniper-23585278/",
+  read_more_pl: "https://pl.wikipedia.org/wiki/Ludmi%C5%82a_Pawliczenko ",
+  country_id: russia.id )
+
+  ludmila_eleanor = Event.create!(title_eng: "Eleanor Roosevelt visits Lyudmila Pavlichenko in Moscow",
+  title_pl: " ",
+  description_eng: " 15 years after Lyudmila Pavlichenko (world's deadliest and most successful female sniper) toured the US with Eleanor Roosevelt, she was visited by her friend, Eleanor Roosevelt. The unlikely friendship survived politics, distance and time. ",
+  description_pl: " ",
+  mmddyyy: "19160712",
+  year_era_id: 1957 ,
+  month_id: 9,
+  day_id: 9,
+  month_day_id: 253,
+  read_more_eng: "https://www.smithsonianmag.com/history/eleanor-roosevelt-and-the-soviet-sniper-23585278/",
+  read_more_pl: " ",
+  country_id: russia.id )
+
+  caroline_death = Event.create!(
+  title_eng: " Death of Caroline Duby Glassman",
+  title_pl: "Śmierć Caroline Duby Glassman ",
+  description_eng: " Caroline D. Glassman was the first women to serve on the Maine Supreme Juidicial Court. Although after two seven-year terms she herself did not seek the third, but she made sure that her replacement was a woman - Leigh Saufley.",
+  description_pl: " Caroline D. Glassman była pierwszą kobietą służącą w Sądzie Najwyższym w stanie Maine. Po dwóch siedmioletnich kadencjach zrezygnowała z trzeciej, jednak wciąż żywiła nadzieję, że jej zastępczynią będzie kobieta. ",
+  mmddyyy: "20130710",
+  year_era_id: 2013 ,
+  month_id: 7,
+  day_id: 10,
+  month_day_id: 192,
+  read_more_eng: "https://bangordailynews.com/2013/07/11/news/portland/first-woman-to-serve-on-maine-supreme-judicial-court-dies-at-90/",
+  read_more_pl: " ",
+  country_id: usa.id )
+
+  nz_lgbt = Event.create!(
+    title_eng: "Homosexuality legalized in New Zealand! ",
+    title_pl: "Homoseksualizm legalny w Nowej Zelandii! ",
+    description_eng: "The New Zealand parliament passed the Homsoexual Law Reform Act which legalised consensual sex between men aged 16 and older. ",
+    description_pl: "Nowozelandzki parlament uchwala ustawę o reformie prawa homoseksualnego, która zalegalizowała konsensualny seks między mężczyznami w wieku 16 lat i starszymi .",
+    mmddyyy: "19860709 ",
+    year_era_id: 1986 ,
+    month_id: 7,
+    day_id: 9,
+    month_day_id: 191,
+    read_more_eng: "https://nzhistory.govt.nz/culture/homosexual-law-reform/homosexual-law-reform",
+    read_more_pl: "https://www.rp.pl/Spoleczenstwo/180409851-Nowa-Zelandia-ustawa-wykresla-wyroki-za-homoseksualizm.html ",
+    country_id: nz.id)
+
+    focke = Event.create!(
+      title_eng: "Death of Katharina Focke ",
+      title_pl: "Śmierć Kathariny Focke ",
+      description_eng: " She was the first female director of the Bildungswerk Europäische Politik in Cologne (today called the Institute for European Politics - IEP) and a member of European Parliament very committed to improve women’s rights.",
+      description_pl: "Była pierwszą kobietą, która została dyrektorką  Bildungswerk Europäische Politik (dziś Instytut Polityki Europejskiej - IEP) i członkinią Parlamentu Europejskiego, która dążyła do polepszenia sytuacji kobiet.  ",
+      mmddyyy: "20160710",
+      Year_era_id: 2016  ,
+      month_id: 7,
+      day_id: 10,
+      month_day_id: 192,
+      read_more_eng: "http://iep-berlin.de/en/in-remembrance-of-dr-katharina-focke/ ",
+      read_more_pl: " ",
+      country_id:  germany.id)
+
+    lee = Event.create!(
+    title_eng: "Harper Lee’s “To Kill a Mockingbird” is published for the first time in the US ",
+    title_pl: " Powieść “Zabić Drozda” Harper Lee zostaje po raz pierwszy wydana w USA",
+    description_eng: "The story written by Harper Lee became one of the most significant books on the topic of racial inequalities and rape also addressing other issues such as classism and gender roles ",
+    description_pl: "Powieść autorstwa Harper Lee stała się jedną z bardziej znaczących książek poruszających temat nierówności rasowych oraz gwałtu, odwołując się również do takich wątków jak klasizm czy role płciowe.",
+    mmddyyy: "19600711",
+    year_era_id: 1960 ,
+    month_id: 7,
+    day_id: 11,
+    month_day_id: 193,
+    read_more_eng: " https://en.wikipedia.org/wiki/To_Kill_a_Mockingbird",
+    read_more_pl: "https://pl.wikipedia.org/wiki/Zabi%C4%87_drozda
+    http://literackie-skarby.blogspot.com/2011/06/rzez-ptakow-spiewajacych-zabic-drozda.html ",
+    country_id: usa.id )
+
+    beah_birth = Event.create!(
+title_eng: " Birth of Beah Richards",
+title_pl: " Urodziny Beah Richardss",
+description_eng: "Beah Richards was an american actress, author and poet but, most importantly, an activist. In her most famous poem “A Black Woman Speaks of White Womanhood” she addressed the issue of white womanhood, white supremacy and the idea of multiracial feminism. ",
+description_pl: " Beah Richards była amerykańską aktorką, autorką i poetką, ale przede wszystkim, aktywistką. W jednym ze swoich najsłynniejszych wierszy “Czarna kobieta mówi o białej kobiecości” porusza ona temat białej kobiecości, białej wyższości, ale również teoretyzuje o wielorasowym feminizmie.",
+mmddyyy: "19200712 ",
+year_era_id:  1920,
+month_id: 7,
+day_id: 13,
+month_day_id: 195,
+read_more_eng: "https://www.lipstickalley.com/threads/beah-richards-a-black-woman-speaks-of-white-womanhood-poem.1888842/
+ “Beah: A Black Woman Speaks (2003)",
+read_more_pl: " https://pl.wikipedia.org/wiki/Beah_Richards",
+country_id:  usa.id)
+
+rawya = Event.create!(
+title_eng: " Rawya Ateya becomes the first female parliamentarian in the Arab world",
+title_pl: "Rawya Ateya zostaje pierwszą kobietą parlamentarzystką w świecie arabskim. ",
+description_eng: " Although Rwaya Ateya was not the only women elected in the first Egyptian elections, her victory was announced before that of Amina Shukri (22 July). Ateya was also the first woman to be commissioned as an officer in the Liberation Army the year before the elections.",
+description_pl: "Pomimo że Rawya Ateya nie była jedyną kobietą wybraną w pierwszych egipskich wyborach parlamentarnych po uchwaleniu nowej konstytucji, jej wygrana została ogłoszna wcześniej niż wygrana Aminy Shukri (22 Lipca). Ateya była również pierwszą kobietą nominowaną na oficera (oficerkę?) w Armii Wyzwolenia w roku poprzedzającym wybory parlamentarne. ",
+mmddyyy: "19570714 ",
+year_era_id: 1957,
+month_id: 7,
+day_id: 14,
+month_day_id: 196,
+read_more_eng: "https://en.wikipedia.org/wiki/Rawya_Ateya ",
+read_more_pl: " ",
+country_id:  egypt.id)
+
+
+
 
   ################# JOINTS ###############
   Tsu.create!(type_id: women.id, subscription_id: sylwia_slack.id)
   Tsu.create!(type_id: queer.id, subscription_id: sylwia_slack.id)
   Tsu.create!(type_id: queer.id, subscription_id: joel_slack.id)
 
+  Et.create!(event_id: nz_lgbt.id, type: 2)
+  Et.create!(event_id: focke.id, type: 1)
+  Et.create!(event_id: lee.id, type: 1)
+  Et.create!(event_id: beah_birth.id, type: 1)
+  Et.create!(event_id: rawya, type: 1)
+
+
+  Et.create!(event_id: caroline_death.id, type_id: 1)
+  Ep.create!(event_id: caroline_death.id, person_id: caroline.id)
+
+  Et.create!(event_id: ludmila_eleanor.id, type_id: 1)
+  Ep.create!(event_id: ludmila_eleanor.id, person_id: ludmila.id)
+  Ep.create!(event_id: ludmila_eleanor.id, person_id: eleanor.id)
+
+  Et.create!(event_id: village_vanguard_makeba.id, type_id: 1)
+  Ep.create!(event_id: ludmila_birth.id, person_id: ludmila.id)
   Et.create!(event_id: village_vanguard_makeba.id, type_id: 1)
   Ep.create!(event_id: village_vanguard_makeba.id, person_id: miriam.id)
   Ep.create!(event_id: polonium.id, person_id: maria.id)
@@ -554,6 +738,12 @@ wilma = Person.create!(
   Cp.create!(country_id: barb_country.id, person_id: nina.id)
   Cp.create!(country_id: usa.id, person_id: susan.id)
   Cp.create!(country_id: usa.id, person_id: lorraine.id)
+
+  Pp.create!(place_id: moscow.id, person_id: eleanor.id, description_eng: "In 1957 US First Lady Eleanor Roosevelt met up with an old friend, Lyudmila Mikhailovna Pavlichenko, world's deadliest sniper.")
+
+  Pp.create!(place_id: moscow.id, person_id: ludmila.id, description_eng: "In 1957 US First Lady Eleanor Roosevelt met up with an old friend, Lyudmila Mikhailovna Pavlichenko, world's deadliest sniper.")
+
+  Pp.create!(place_id: sevastopol.id, person_id: ludmila.id, description_eng: "When the Romanians gained control of Odessa on 15 October 1941, the 24-year-old Lyudmila Mikhailovna Pavlichenko's unit was withdrawn by sea to Sevastopol on the Crimean Peninsula, where she fought for more than eight months.")
 
   Pp.create!(place_id: martha_school_place.id, person_id: martha.id, description_eng: "The Martha Graham Dance Company is the oldest dance company in America, founded in 1926.")
 
