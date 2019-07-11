@@ -398,13 +398,14 @@ wilma = Person.create!(
 
   barbados = Place.create!(name_eng: "Barbados", name_pl: "Barbados", zip: 15028, country_id: barb_country.id, latitude: 13.193887, longitude: -59.543198)
 
-  julliard = Place.create!(name_eng: "Julliard School", name_pl: "Julliard School", zip: 10023, country_id: usa.id, latitude: 40.773871, longitude: 40.773871 -73.983178)
+  julliard = Place.create!(name_eng: "Julliard School", name_pl: "Julliard School", zip: 10023, country_id: usa.id, latitude: 40.773871, longitude:, -73.983178)
 
   cuny = Place.create!(name_eng: "City University of New York", name_pl: "Uniwersytet Miejski Nowego Jorku", zip: 10001, country_id: usa.id, latitude: 40.8194, longitude: -73.95)
 
-  nycacs = Place.create!(name_eng: "York City Administration for Children's Services", name_pl: "York City Administration for Children's Services", zip: 10038, country_id: usa.id, latitude: 40.708850, longitude: -74.007870)
+  nycacs = Place.create!(name_eng: "York City Administration for Children's Services", name_pl: "York City Administration for Children's Services", zip: 10038, country_id: usa.id, latitude: 40.708850, longitude: -74.007871)
 
   bleecker = Place.create!(name_eng: "337 Bleecker Street", name_pl: "337 Bleecker Street", zip: 10014, country_id: usa.id, latitude: 40.701100, longitude: -74.007870)
+
   detention_house = Place.create!(name_eng: "Women’s House of Detention", name_pl: "Zakład karny dla kobiet", zip: 10011, country_id: usa.id, latitude: 40.708850, longitude: -74.007870)
 
   lrei = Place.create!(name_eng: "Little Red School House (LREI)", name_pl: " Little Red School House", zip: 10014, country_id: usa.id, latitude: 40.726850, longitude: -74.004780)
