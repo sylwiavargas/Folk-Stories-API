@@ -344,6 +344,34 @@ wilma = Person.create!(
   picture: "https://bdn-data.s3.amazonaws.com/uploads/2012/02/State-of-Judiciary-600x832.jpg"
   )
 
+sylvia = Person.create!(
+name: “Sylvia Ray Rivera“,
+birth: 1951,
+death: 2002,
+bio_eng: "Sylvia Rivera (1951-2002) was a Latina American gay liberation and transgender rights activist. She identified as a drag queen, was a founding member of the Gay Liberation Front and, alongside Marsha P Johnson, she co-founded the Street Transvestite Action Revolutionaries (STAR), a group dedicated to helping homeless gay youth, trans women and young drag queens..",
+bio_pl: "Amelia Earhart (1897-1939) - amerykańska pilotka, dziennikarka i poetka; jako pierwsza kobieta i druga osoba na świecie przeleciała samotnie nad oceanem. Działaczka feministyczna.",
+quote_eng: "I was a radical, a revolutionist. I am still a revolutionist…I am glad I was in the Stonewall riot. I remember when someone threw a Molotov cocktail, I thought, “My god, the revolution is here. The revolution is finally here!",
+Quote_pl: "Byłam radykalistką, rewolucjonistką. Ciągle jestem rewolucjonistką… I cieszę się, że brałam udział w zamieszkach Stonewall. Pamiętam moment, gdy ktoś rzucił koktajlem Mołotowa i pomyślałam: “Mój boże, to rewolucja. Rewolucja wreszcie jest tutaj!",
+read_more_eng: "https://en.wikipedia.org/wiki/Sylvia_Rivera
+https://www.biography.com/activist/sylvia-rivera",
+read_more_pl: "http://codziennikfeministyczny.pl/wciaz-slysze-krzyki-wypierdalaj-wypierdalaj/",
+picture: "https://media.them.us/photos/5c9a3e83fcaa6b5b4a27797f/2:3/w_720,h_1080,c_limit/sylvia-rivera.jpg"
+)
+
+barbara = Person.create!(
+name: "Barbara GIttings",
+birth: 1932,
+death: 2007,
+bio_eng: "Barbara Gittings (1932-2007) was an American LGBTQ+ euqality activist and organizator of the New York chapter of the Daughters of Bilitis, the first lesbian civil and political rights organisation in the US. She was involved in the American Library Assosiciation, wanting to promote positive literature about homosexuality in libraries. She was also a part of the movement that got the American Psychiatric Association to drop homosexuality from the list of mental illnesses in 1972.",
+bio_pl: "Barbara Gittings (1932-2007) była amerykańską działaczką na rzecz równości społeczności LGBTQ+ i organizatorką nowojorskiego oddziału Córek Bilitis, pierwszej politycznej i społecznej organizacji lesbjisjkiej w USA. Była zaangażowana w Stowarzyszenie Bibliotek Amerykańskich, dążąc do promocji literatury pozytywnie mówiącej o homoseksualizmie w bibliotekach. Była również częścią ruchu zaangażowanego w działania, które doprowadziły w 1972 do zniesienia homoseksualizmu z listy chorób psychicznych przez AmerykańskieTowarzystwo Psychiatryczne.",
+quote_eng: "Equality means more than passing laws. The struggle is really won in the hearts and minds of the community, where it really counts.",
+Quote_pl: "Równość oznacza więcej niż tylko uchwalanie praw. Tę walkę wygrywa się w sercach i umysłach społeczności, tam rzeczywiście się liczy.",
+read_more_eng: "https://en.wikipedia.org/wiki/Barbara_Gittings
+https://medium.com/queer-history-for-the-people/barbara-gittings-mother-of-the-gay-rights-movement-b321cb527f20",
+read_more_pl: "https://pl.wikipedia.org/wiki/Barbara_Gittings",
+picture: "https://miro.medium.com/max/336/1*asyxecdzpQlCnB11ZJ7wPg.jpeg"
+)
+
 
   ################# CONNECTIONS ###############
   Connection.create!(relationship: "romantic", person_one_id: susan.id, person_two_id: annie.id)
@@ -367,6 +395,11 @@ wilma = Person.create!(
   Connection.create!(relationship: "friendship", person_one_id: martha.id, person_two_id: katherine.id)
 
   Connection.create!(relationship: "friendship", person_one_id: marsha.id, person_two_id: storme.id)
+  Connection.create!(relationship: "friendship", person_one_id: marsha.id, person_two_id: sylvia.id)
+  Connection.create!(relationship: "friendship", person_one_id: marsha.id, person_two_id: barbara.id)
+  Connection.create!(relationship: "friendship", person_one_id: sylvia.id, person_two_id: storme.id)
+  Connection.create!(relationship: "friendship", person_one_id: barbara.id, person_two_id: storme.id)
+  Connection.create!(relationship: "friendship", person_one_id: sylvia.id, person_two_id: barbara.id)
 
   Connection.create!(relationship: "friendship", person_one_id: maria.id, person_two_id: kazimiera.id)
 
@@ -391,6 +424,8 @@ wilma = Person.create!(
   ukraine = Country.create!(name_eng: "Ukraine", name_pl: "Ukraina", continent_id: asia.id)
   nz = Country.create!(name_eng: "New Zeland", name_pl: "Nowa Zelandia", continent_id: australia.id)
   egypt = Country.create!(name_eng: "Egypt", name_pl: "Egipt", continent_id: africa.id)
+  uk = Country.create!(name_eng: "United Kingdom", name_pl: "Wielka Brytania", continent_id: europe.id)
+  benin = Country.create!(name_eng: "Benin", name_pl: "Benin", continent_id: africa.id)
 
 
   ################# PLACES ###############
@@ -554,7 +589,7 @@ wilma = Person.create!(
 
   polonium = Event.create!(title_eng: "Maria Skłodowska-Curie announces her discovery", title_pl: "Tu nic nie ma Maria Skłodowska-Curie.", description_eng: "Maria Skłodowska-Curie and her husband published a joint paper announcing the existence of an element which they named 'polonium', in honour of her native Poland", description_pl: " ", mmddyyy: "19590712", year_era_id: 1898, month_id: 7, day_id: 11, month_day_id: 193, read_more_eng: "https://en.wikipedia.org/wiki/Marie_Curie", read_more_pl: "https://pl.wikipedia.org/wiki/Maria_Skłodowska-Curie", country_id: poland.id)
 
-  ludmila_birth = Event.create!(title_eng: "Birth of Lyudmila Pavlichenko ",
+  ludmila_birth = Event.create!(title_eng: "Birth of Lyudmila Pavlichenko, world's deadliest sniper ",
   title_pl: " Urodziny Ludmiły Pawliczenko",
   description_eng: " Lyudmila Pavlichenko up to this day is regarded as one of the top military snipers of all time and the best and most successful female sniper in history. ",
   description_pl: "Ludmiła Pawliczenko aż do dzisiaj jest uważana za jedną z najlepszych wojskowych snajperek wszech czasów oraz kobietą-snajperką, która odniosła największe sukcesy. ",
@@ -581,7 +616,7 @@ wilma = Person.create!(
   country_id: russia.id )
 
   caroline_death = Event.create!(
-  title_eng: " Death of Caroline Duby Glassman",
+  title_eng: " Death of Caroline Duby Glassman, the first female judge on Maine Supreme Juidicial Court",
   title_pl: "Śmierć Caroline Duby Glassman ",
   description_eng: " Caroline D. Glassman was the first women to serve on the Maine Supreme Juidicial Court. Although after two seven-year terms she herself did not seek the third, but she made sure that her replacement was a woman - Leigh Saufley.",
   description_pl: " Caroline D. Glassman była pierwszą kobietą służącą w Sądzie Najwyższym w stanie Maine. Po dwóch siedmioletnich kadencjach zrezygnowała z trzeciej, jednak wciąż żywiła nadzieję, że jej zastępczynią będzie kobieta. ",
@@ -609,7 +644,7 @@ wilma = Person.create!(
     country_id: nz.id)
 
     focke = Event.create!(
-      title_eng: "Death of Katharina Focke ",
+      title_eng: "Death of Katharina Focke, a German politician ",
       title_pl: "Śmierć Kathariny Focke ",
       description_eng: " She was the first female director of the Bildungswerk Europäische Politik in Cologne (today called the Institute for European Politics - IEP) and a member of European Parliament very committed to improve women’s rights.",
       description_pl: "Była pierwszą kobietą, która została dyrektorką  Bildungswerk Europäische Politik (dziś Instytut Polityki Europejskiej - IEP) i członkinią Parlamentu Europejskiego, która dążyła do polepszenia sytuacji kobiet.  ",
@@ -638,7 +673,7 @@ wilma = Person.create!(
     country_id: usa.id )
 
     beah_birth = Event.create!(
-title_eng: " Birth of Beah Richards",
+title_eng: " Birth of Beah Richards: actress and feminist activist",
 title_pl: " Urodziny Beah Richardss",
 description_eng: "Beah Richards was an american actress, author and poet but, most importantly, an activist. In her most famous poem “A Black Woman Speaks of White Womanhood” she addressed the issue of white womanhood, white supremacy and the idea of multiracial feminism. ",
 description_pl: " Beah Richards była amerykańską aktorką, autorką i poetką, ale przede wszystkim, aktywistką. W jednym ze swoich najsłynniejszych wierszy “Czarna kobieta mówi o białej kobiecości” porusza ona temat białej kobiecości, białej wyższości, ale również teoretyzuje o wielorasowym feminizmie.",
@@ -666,6 +701,97 @@ read_more_eng: "https://en.wikipedia.org/wiki/Rawya_Ateya ",
 read_more_pl: " ",
 country_id:  egypt.id)
 
+kuras_birth = Event.create!(
+title_eng: "Birth of Ellen Kuras, a cinematographer ",
+title_pl: "Urodziny Ellen Kuras ",
+description_eng: " Ellen Kuras is one of the first women who established an extensive career in cinematography. She’s one of the very few female members of the American Society of Cinematographers.",
+description_pl: "Ellen Kuras jest jedną z pierwszych kobiet, które posiada rozległą kinematograficzną karierę. Jest jedną z niewielu żeńskich członkiń Amerykańskiego Stowarzyszenia Operatorów Filmowych. ",
+mmddyyy: "19590710",
+Year_era_id: 1959  ,
+month_id: 7,
+day_id: 10,
+month_day_id: 192,
+read_more_eng: "http://archive.pov.org/betrayal/ellen-kuras/ ",
+read_more_pl: " https://offcamera.pl/news/kino-odzwierciedla-nasze-czasy-wywiad-z-ellen-kuras/972",
+country_id:  usa.id)
+
+martina = Event.create!(
+title_eng: "Martina Navratilova and Billie Jean King win the women’s double championship at Wimbledon. ",
+title_pl: " Martina Navratilova i Billie Jean King zdobywają mistrzostwo w grze podwójne kobiet na Wimbledonie.",
+description_eng: "This day became important both for Navratilova and King as their teamwork not only granted them win against Betty Stove and Wendy Turnbull in the finals in the double championship but also helped King to clinch the record of 20 Wimbledon titles.",
+description_pl: "Dzień ten był kluczowy zarówno dla Navratilovej jak i King, gdyż ich współpraca nie tylko pomogła im zwyciężyć z Betty Stove i Wendy Turnbull w finale gry podwójnej kboiety, ale również zdobyć King rekord 20 tytułów Wimbledonu ",
+mmddyyy: "19790713 ",
+year_era_id: 1979,
+month_id: 7,
+day_id: 13,
+month_day_id: 195,
+read_more_eng: "http://tennis-buzz.com/wimbledon-1979-passing-on-the-record/
+ https://en.wikipedia.org/wiki/Billie_Jean_King
+https://pl.wikipedia.org/wiki/Martina_Navr%C3%A1tilov%C3%A1",
+read_more_pl: "https://pl.wikipedia.org/wiki/Martina_Navr%C3%A1tilov%C3%A1
+https://pl.wikipedia.org/wiki/Billie_Jean_King ",
+country_id: uk.id )
+
+angelique = Event.create!(
+title_eng: " Birth of Angélique Kidjo, a Grammy Award-winning singer, a humanitarian and an activist",
+title_pl: " Narodziny Angélique Kidjo",
+description_eng: "Angélique Kidjo is a Grammy Award-winning singer, a humanitarian and an activist. She became the first woman to appear on Forbes’s list of the Most Powerful Celebrities in Africa and was also a UNICEF Goodwill Ambassador advocating on behalf of women, children, and human rights. ",
+description_pl: " Angélique Kidjo jest wokalistką-zdobywczynią nagrody Grammy, humanitarystką i aktywistką. Jest pierwszą osobą, która pojawiła się na liście Najpotężniejszych Celebrytów w Afryce. Była również ambasadorką dobrej woli UNICEF, występując w sprawie kobiet, dzieci oraz praw człowieka. ",
+mmddyyy: "19600714 ",
+year_era_id: 1960,
+month_id: 7,
+day_id: 14,
+month_day_id: 196,
+read_more_eng: "https://riverdalepress.com/stories/artist-as-activist-a-conversation-with-anglique-kidjo-a-passion-for-freedom-and-social-justice,66692
+https://en.wikipedia.org/wiki/Ang%C3%A9lique_Kidjo",
+read_more_pl: "https://pl.wikipedia.org/wiki/Ang%C3%A9lique_Kidjo ",
+country_id:  benin.id)
+
+kate_gordon = Event.create!(
+title_eng: "Birth of Kate M. Gordon, an American suffragist ",
+title_pl: "Narodziny Kate M. Gordon ",
+description_eng: " Kate M. Gordon was an American suffragist, civic leader, and one of the leading advocates of women’s voting rights in the Southern US. She organised Southern States Woman Suffrage Conference. She was also the person directing the campaign for woman suffrage in Louisiana in 1918, the first statewide effort in the Southern US. ",
+description_pl: "Kate M. Gordon była amerykańską sufrażystką, działaczką społeczną i jedną z czołowych kobiet walczących o prawo głosu dla kobiet na południu Stanów Zjednoczonych. Zorganizowała Południowoamerykańską Konferencję Sufrażystek. Była również jedną z osób przewodzących kampanii na rzecz sufrażystek w Luizjanie w 1918, pierwszym takim wydarzeniu o zasięgu ogólnostanowym na południu USA. ",
+mmddyyy: "18610714 ",
+year_era_id: 1861,
+month_id: 7,
+day_id: 14,
+month_day_id: 196,
+read_more_eng: "https://en.wikipedia.org/wiki/Kate_M._Gordon ",
+read_more_pl: " https://pl.wikipedia.org/wiki/Kate_M._Gordon",
+country_id: usa.id)
+
+emmeline = Event.create!(
+title_eng: "Birth of Emmeline Pankhurst, a British suffragist ",
+title_pl: "Urodziny Emmeline Pankhurst ",
+description_eng: " Emmeline Pankhurst was a political activist and an important figure who helped women win the right to vote in 1918. She was criticised for her militant tactics yet she was described as one of the 100 Most Important People of the 20th Century for her devotion to the women’s case.",
+description_pl: "Emmeline Pankhurst była aktywistką i jedną z ważniejszych postaci, która pomogła zdobyć Brytyjkom prawa wyborcze w 1918. Była wielokrotnie krytykowana za swoje wojownicze taktyki aktywistyczne, jednak została określona jako jedna ze 100 Najbardziej Istotnych Osób XX wieku za swoje oddanie sprawie kobiet. ",
+mmddyyy: " 18580715",
+year_era_id: 1858,
+month_id: 7,
+day_id: 15,
+month_day_id: 197,
+read_more_eng: "https://en.wikipedia.org/wiki/Emmeline_Pankhurst
+https://www.britannica.com/biography/Emmeline-Pankhurst ",
+read_more_pl: "https://pl.wikipedia.org/wiki/Emmeline_Pankhurst
+http://pokojadwokacki.pl/glosu-kobietom-historia-emmeline-pankhurst-adw-weronika-holowczyc/",
+country_id: uk.id)
+
+vivian = Event.create!(
+title_eng: "Birth of Vivian Malone Jones",
+title_pl: " ",
+description_eng: " Vivian Malone Jones was one of the first two black students (along James Hood) enrolled at the University of Alabama (1963) and the first black graduate (1965). She became well-known after George Wallace attempted to block her from enrolling to the university. After graduation, she joined the civil rights division of the US Department of Justice and worked towards voter equality for minorities",
+description_pl: " Vivian Malone Jones była jedną z dwóch pierwszych afroamerykanów (obok Jamesa Hooda), którzy dostali się na Uniwersytet Alabamy (1963) i pierwszą jego czarną absolwentką (1965). Jej imię stało się rozpoznawalne po tym gdy George Wallace próbował zablokować jej możliwość dostania się na uniwersytet. Po ukończeniu studiów, dołączyła do wydziału praw obywatelskich amerykańskiego Departamentu Sprawiedliwości i pracowała na rzecz równości wyborczej dla mniejszości.",
+mmddyyy: "19420715 ",
+year_era_id: 1942,
+month_id: 7,
+day_id: 15,
+month_day_id: 197,
+read_more_eng: "https://en.wikipedia.org/wiki/Vivian_Malone_Jones
+http://theweeklychallenger.com/vivian-malone-civil-rights-hero-who-defied-racial-segregation/",
+read_more_pl: "https://wiadomosci.onet.pl/kiosk/kiedy-rasisci-stawali-w-drzwiach/jrmqk ",
+country_id:  usa.id)
+
 
 
 
@@ -679,7 +805,18 @@ country_id:  egypt.id)
   Et.create!(event_id: lee.id, type: 1)
   Et.create!(event_id: beah_birth.id, type: 1)
   Et.create!(event_id: rawya, type: 1)
+  Et.create!(event_id: kate_gordon, type: 1)
+  Et.create!(event_id: emmeline, type: 1)
 
+  Et.create!(event_id: vivian, type: 1)
+
+
+  Et.create!(event_id: kuras.id, type_id: 1)
+  Et.create!(event_id: beah.id, type_id: 1)
+  Et.create!(event_id: martina.id, type_id: 1)
+  Et.create!(event_id: martina.id, type_id: 2)
+
+  Et.create!(event_id: angelique.id, type_id: 1)
 
   Et.create!(event_id: caroline_death.id, type_id: 1)
   Ep.create!(event_id: caroline_death.id, person_id: caroline.id)
@@ -697,6 +834,9 @@ country_id:  egypt.id)
   Et.create!(event_id: stonewall_riots.id, type_id: 2)
   Ep.create!(event_id: stonewall_riots.id, person_id: marsha.id)
   Ep.create!(event_id: stonewall_riots.id, person_id: storme.id)
+  Ep.create!(event_id: stonewall_riots.id, person_id: sylvia.id)
+  Ep.create!(event_id: stonewall_riots.id, person_id: barbara.id)
+
   Et.create!(event_id: radio.id, type_id: women.id)
   Et.create!(event_id: radio.id, type_id: queer.id)
   Et.create!(event_id: not_guilty_angela.id, type_id: 1)
@@ -749,6 +889,10 @@ country_id:  egypt.id)
   Pp.create!(place_id: martha_school_place.id, person_id: martha.id, description_eng: "The Martha Graham Dance Company is the oldest dance company in America, founded in 1926.")
 
   Pp.create!(place_id: stonewall_inn.id, person_id: marsha.id, description_eng: "Marsha P. Johnson has been named, along with Zazu Nova and Jackie Hormona, by a number of the Stonewall veterans as being 'three individuals known to have been in the vanguard' of the pushback against the police at the uprising in 1969.")
+
+  Pp.create!(place_id: stonewall_inn.id, person_id: sylvia.id, description_eng: " ")
+
+  Pp.create!(place_id: stonewall_inn.id, person_id: barbara.id, description_eng: " ")
 
   Pp.create!(place_id: stonewall_inn.id, person_id: storme.id, description_eng: "The 1969 Stonewall uprising reportedly started after Stormé DeLarverie fought back against the police officer who attempted to arrest her.")
 
