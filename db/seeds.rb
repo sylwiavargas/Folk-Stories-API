@@ -65,7 +65,7 @@ bio_eng: "Nina Simone (1933-2003) was an American singer, pianist, songwriter. H
 bio_pl: " ",
 quote_eng: "I know I’m different, but I don’t think about it.",
 quote_pl: " ",
-read_more_eng: "https://www.blackhistorymonth.org.uk/article/section/bhm-heroes/nina-simone-singer-songwriter-civil-rights-campaigner/",
+read_more_eng: "https://blackhistorymonth.org.uk/article/section/bhm-heroes/nina-simone-singer-songwriter-civil-rights-campaigner/",
 read_more_pl: "https://pl.wikipedia.org/wiki/Nina_Simone",
 picture: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Nina_Simone_%281965%29.jpg/180px-Nina_Simone_%281965%29.jpg"
 )
@@ -246,7 +246,7 @@ wilma = Person.create!(
   death: 1966,
   bio_eng: "Helen Tamiris was an American choreographer, modern dancer, and teacher. Much of her known works deal with social issues like racism and war. Helen Tamiris was Jewish and she choreographed some pieces with themes that reflected her heritage in this regard.",
   bio_pl: " ",
-  quote_eng: "Art is international but the artist is a product of a nationality. … There are no general rules. Each original work of art creates its own code.",
+  quote_eng: "Art is international but the artist is a product of a nationality. There are no general rules. Each original work of art creates its own code.",
   quote_pl: " ",
   read_more_eng: "https://jwa.org/encyclopedia/article/tamiris-helen",
   read_more_pl: "https://en.wikipedia.org/wiki/Helen_Tamiris",
@@ -313,7 +313,7 @@ wilma = Person.create!(
   bio_pl: " ",
   quote_eng: "When a neighbor’s boy boasted of his exploits at a shooting range, I set out to show that a girl could do as well. So I practiced a lot.",
   quote_pl: " ",
-  read_more_eng: "https://www.smithsonianmag.com/history/eleanor-roosevelt-and-the-soviet-sniper-23585278/",
+  read_more_eng: "https://smithsonianmag.com/history/eleanor-roosevelt-and-the-soviet-sniper-23585278/",
   read_more_pl: "https://pl.wikipedia.org/wiki/Ludmi%C5%82a_Pawliczenko",
   picture: "https://upload.wikimedia.org/wikipedia/commons/1/1b/Lyudmila_Pavlichenko%2C_before_title.png"
   )
@@ -328,7 +328,7 @@ wilma = Person.create!(
   quote_pl: " ",
   read_more_eng: "https://en.wikipedia.org/wiki/Caroline_Duby_Glassman",
   read_more_pl: "https://pl.wikipedia.org/wiki/Ludmi%C5%82a_Pawliczenko",
-  picture: "https://en.wikipedia.org/wiki/File:Caroline_Duby_Glassman.jpg#/media/File:Caroline_Duby_Glassman.jpg"
+  picture: "https://images.findagrave.com/photos250/photos/2013/192/113703993_137364961070.jpg"
   )
 
   leigh = Person.create!(
@@ -345,15 +345,15 @@ wilma = Person.create!(
   )
 
 sylvia = Person.create!(
-name: “Sylvia Ray Rivera“,
+name: "Sylvia Ray Rivera",
 birth: 1951,
 death: 2002,
 bio_eng: "Sylvia Rivera (1951-2002) was a Latina American gay liberation and transgender rights activist. She identified as a drag queen, was a founding member of the Gay Liberation Front and, alongside Marsha P Johnson, she co-founded the Street Transvestite Action Revolutionaries (STAR), a group dedicated to helping homeless gay youth, trans women and young drag queens..",
 bio_pl: "Amelia Earhart (1897-1939) - amerykańska pilotka, dziennikarka i poetka; jako pierwsza kobieta i druga osoba na świecie przeleciała samotnie nad oceanem. Działaczka feministyczna.",
-quote_eng: "I was a radical, a revolutionist. I am still a revolutionist…I am glad I was in the Stonewall riot. I remember when someone threw a Molotov cocktail, I thought, “My god, the revolution is here. The revolution is finally here!",
-Quote_pl: "Byłam radykalistką, rewolucjonistką. Ciągle jestem rewolucjonistką… I cieszę się, że brałam udział w zamieszkach Stonewall. Pamiętam moment, gdy ktoś rzucił koktajlem Mołotowa i pomyślałam: “Mój boże, to rewolucja. Rewolucja wreszcie jest tutaj!",
+quote_eng: "I was a radical, a revolutionist. I am still a revolutionist…I am glad I was in the Stonewall riot. I remember when someone threw a Molotov cocktail, I thought, 'My god, the revolution is here. The revolution is finally here!''",
+quote_pl: "Byłam radykalistką, rewolucjonistką. Ciągle jestem rewolucjonistką… I cieszę się, że brałam udział w zamieszkach Stonewall. Pamiętam moment, gdy ktoś rzucił koktajlem Mołotowa i pomyślałam: “Mój boże, to rewolucja. Rewolucja wreszcie jest tutaj!",
 read_more_eng: "https://en.wikipedia.org/wiki/Sylvia_Rivera
-https://www.biography.com/activist/sylvia-rivera",
+https://biography.com/activist/sylvia-rivera",
 read_more_pl: "http://codziennikfeministyczny.pl/wciaz-slysze-krzyki-wypierdalaj-wypierdalaj/",
 picture: "https://media.them.us/photos/5c9a3e83fcaa6b5b4a27797f/2:3/w_720,h_1080,c_limit/sylvia-rivera.jpg"
 )
@@ -365,7 +365,7 @@ death: 2007,
 bio_eng: "Barbara Gittings (1932-2007) was an American LGBTQ+ euqality activist and organizator of the New York chapter of the Daughters of Bilitis, the first lesbian civil and political rights organisation in the US. She was involved in the American Library Assosiciation, wanting to promote positive literature about homosexuality in libraries. She was also a part of the movement that got the American Psychiatric Association to drop homosexuality from the list of mental illnesses in 1972.",
 bio_pl: "Barbara Gittings (1932-2007) była amerykańską działaczką na rzecz równości społeczności LGBTQ+ i organizatorką nowojorskiego oddziału Córek Bilitis, pierwszej politycznej i społecznej organizacji lesbjisjkiej w USA. Była zaangażowana w Stowarzyszenie Bibliotek Amerykańskich, dążąc do promocji literatury pozytywnie mówiącej o homoseksualizmie w bibliotekach. Była również częścią ruchu zaangażowanego w działania, które doprowadziły w 1972 do zniesienia homoseksualizmu z listy chorób psychicznych przez AmerykańskieTowarzystwo Psychiatryczne.",
 quote_eng: "Equality means more than passing laws. The struggle is really won in the hearts and minds of the community, where it really counts.",
-Quote_pl: "Równość oznacza więcej niż tylko uchwalanie praw. Tę walkę wygrywa się w sercach i umysłach społeczności, tam rzeczywiście się liczy.",
+quote_pl: "Równość oznacza więcej niż tylko uchwalanie praw. Tę walkę wygrywa się w sercach i umysłach społeczności, tam rzeczywiście się liczy.",
 read_more_eng: "https://en.wikipedia.org/wiki/Barbara_Gittings
 https://medium.com/queer-history-for-the-people/barbara-gittings-mother-of-the-gay-rights-movement-b321cb527f20",
 read_more_pl: "https://pl.wikipedia.org/wiki/Barbara_Gittings",
@@ -416,7 +416,7 @@ picture: "https://miro.medium.com/max/336/1*asyxecdzpQlCnB11ZJ7wPg.jpeg"
   ################# COUNTRIES ###############
   usa = Country.create!(name_eng: "USA", name_pl: "USA", continent_id: north_am.id)
   france = Country.create!(name_eng: "France", name_pl: "Francja", continent_id: europe.id)
-  germany = Country.create!(name_eng: "Germany", name_pl: "Niemcy", continent_id: europe.id
+  germany = Country.create!(name_eng: "Germany", name_pl: "Niemcy", continent_id: europe.id)
   poland = Country.create!(name_eng: "Poland", name_pl: "Polska", continent_id: europe.id)
   barb_country = Country.create!(name_eng: "Barbados", name_pl: "Barbados", continent_id: north_am.id)
   rpa = Country.create!(name_eng: "South Africa", name_pl: "RPA", continent_id: africa.id)
@@ -433,7 +433,7 @@ picture: "https://miro.medium.com/max/336/1*asyxecdzpQlCnB11ZJ7wPg.jpeg"
 
   barbados = Place.create!(name_eng: "Barbados", name_pl: "Barbados", zip: 15028, country_id: barb_country.id, latitude: 13.193887, longitude: -59.543198)
 
-  julliard = Place.create!(name_eng: "Julliard School", name_pl: "Julliard School", zip: 10023, country_id: usa.id, latitude: 40.773871, longitude:, -73.983178)
+  julliard = Place.create!(name_eng: "Julliard School", name_pl: "Julliard School", zip: 10023, country_id: usa.id, latitude: 40.773871, longitude: -73.983178)
 
   cuny = Place.create!(name_eng: "City University of New York", name_pl: "Uniwersytet Miejski Nowego Jorku", zip: 10001, country_id: usa.id, latitude: 40.8194, longitude: -73.95)
 
@@ -569,7 +569,38 @@ picture: "https://miro.medium.com/max/336/1*asyxecdzpQlCnB11ZJ7wPg.jpeg"
   ################# EVENTS ###############
   # day = MonthDay.find{|md| md.month.id == 7 && md.day.id == 9}
 
-  radio = Event.create!(title_eng: "Eleanor Roosevelt on the radio!", title_pl: "Eleanor Roosevelt w radiu!", description_eng: "Eleanor Roosevelt gave first radio interview - she advocted for less violent tv as violent images impact children.", description_pl: "Eleanor Roosevelt po raz pierwszy wystąpiła w radiu, gdzie rozmawiała o efektach filmów na dzieci i potrzebie wprowadzenia cenzury filmów, które gloryfikują przestępstwa i przemoc.", mmddyyy: "19340709", year_era_id: 1934, month_id: 7, day_id: 10, month_day_id: 191, read_more_eng: "https://www.nytimes.com/1934/07/10/archives/movies-discussed-by-mrs-roosevelt-in-debut-as-radio-news.html?searchResultPosition=1", read_more_pl: "https://www.nytimes.com/1934/07/10/archives/movies-discussed-by-mrs-roosevelt-in-debut-as-radio-news.html?searchResultPosition=1", place_id: nyc.id, country_id: usa.id)
+
+  polonium = Event.create!(title_eng: "Maria Skłodowska-Curie announces her discovery", title_pl: "Tu nic nie ma Maria Skłodowska-Curie.", description_eng: "Maria Skłodowska-Curie and her husband published a joint paper announcing the existence of an element which they named 'polonium', in honour of her native Poland", description_pl: " ", mmddyyy: "19590712", year_era_id: 1898, month_id: 7, day_id: 11, month_day_id: 193, read_more_eng: "https://en.wikipedia.org/wiki/Marie_Curie", read_more_pl: "https://pl.wikipedia.org/wiki/Maria_Skłodowska-Curie", country_id: poland.id)
+
+  radio = Event.create!(title_eng: "Eleanor Roosevelt on the radio!", title_pl: "Eleanor Roosevelt w radiu!", description_eng: "Eleanor Roosevelt gave first radio interview - she advocted for less violent tv as violent images impact children.", description_pl: "Eleanor Roosevelt po raz pierwszy wystąpiła w radiu, gdzie rozmawiała o efektach filmów na dzieci i potrzebie wprowadzenia cenzury filmów, które gloryfikują przestępstwa i przemoc.", mmddyyy: "19340709", year_era_id: 1934, month_id: 7, day_id: 10, month_day_id: 191, read_more_eng: "https://nytimes.com/1934/07/10/archives/movies-discussed-by-mrs-roosevelt-in-debut-as-radio-news.html?searchResultPosition=1", read_more_pl: "https://nytimes.com/1934/07/10/archives/movies-discussed-by-mrs-roosevelt-in-debut-as-radio-news.html?searchResultPosition=1", place_id: nyc.id, country_id: usa.id)
+
+  ludmila_birth = Event.create!(title_eng: "Birth of Lyudmila Pavlichenko, world's deadliest sniper ",
+  title_pl: " Urodziny Ludmiły Pawliczenko",
+  description_eng: " Lyudmila Pavlichenko up to this day is regarded as one of the top military snipers of all time and the best and most successful female sniper in history. ",
+  description_pl: "Ludmiła Pawliczenko aż do dzisiaj jest uważana za jedną z najlepszych wojskowych snajperek wszech czasów oraz kobietą-snajperką, która odniosła największe sukcesy. ",
+  mmddyyy: "19160712",
+  year_era_id: 1916 ,
+  month_id: 7,
+  day_id: 12,
+  month_day_id: 194,
+  read_more_eng: "https://smithsonianmag.com/history/eleanor-roosevelt-and-the-soviet-sniper-23585278/",
+  read_more_pl: "https://pl.wikipedia.org/wiki/Ludmi%C5%82a_Pawliczenko ",
+  country_id: russia.id )
+
+  lee = Event.create!(
+  title_eng: "Harper Lee’s “To Kill a Mockingbird” is published for the first time in the US ",
+  title_pl: " Powieść “Zabić Drozda” Harper Lee zostaje po raz pierwszy wydana w USA",
+  description_eng: "The story written by Harper Lee became one of the most significant books on the topic of racial inequalities and rape also addressing other issues such as classism and gender roles ",
+  description_pl: "Powieść autorstwa Harper Lee stała się jedną z bardziej znaczących książek poruszających temat nierówności rasowych oraz gwałtu, odwołując się również do takich wątków jak klasizm czy role płciowe.",
+  mmddyyy: "19600711",
+  year_era_id: 1960 ,
+  month_id: 7,
+  day_id: 11,
+  month_day_id: 193,
+  read_more_eng: "https://en.wikipedia.org/wiki/To_Kill_a_Mockingbird",
+  read_more_pl: "https://pl.wikipedia.org/wiki/Zabi%C4%87_drozda
+  http://literackie-skarby.blogspot.com/2011/06/rzez-ptakow-spiewajacych-zabic-drozda.html ",
+  country_id: usa.id)
 
   nwpc = Event.create!(title_eng: "300 women started National Women's Political Caucus (NWPC)", title_pl: "Trzysta Amerykanek założyło w USA National Women's Political Caucus (NWPC)", description_eng: "National Women's Political Caucus (NWPC) was founded by over 300 women including Gloria Steinem, Bella Abzug, Betty Friedan, Shirley Chisholm, and Myrlie Evers-Williams.", description_pl: "Wśród nich były: Gloria Steinem, Bella Abzug, Betty Friedan, Shirley Chisholm i Myrlie Evers-Williams.", mmddyyy: "19710711", year_era_id: 1971, month_id: 7, day_id: 11, month_day_id: 193, read_more_eng: "https://en.wikipedia.org/wiki/National_Women%27s_Political_Caucus", read_more_pl: " ", place_id: nyc.id, country_id: usa.id)
 
@@ -587,21 +618,6 @@ picture: "https://miro.medium.com/max/336/1*asyxecdzpQlCnB11ZJ7wPg.jpeg"
 
   martha_school = Event.create!(title_eng: "Martha Graham Center of Contemporary Dance opens its door", title_pl: "Tu nic nie ma Martha Graham.", description_eng: "The Martha Graham Dance Company is the oldest dance company in America, founded in 1926. It has helped develop many famous dancers and choreographers of the 20th and 21st centuries including Erick Hawkins, Anna Sokolow, Merce Cunningham, Lila York, and Paul Taylor.", description_pl: " ", mmddyyy: "19290604", year_era_id: 1969, month_id: 4, day_id: 18, month_day_id: 109, read_more_eng: "https://en.wikipedia.org/wiki/Martha_Graham", read_more_pl: "https://pl.wikipedia.org/wiki/Martha_Graham", country_id: usa.id)
 
-  polonium = Event.create!(title_eng: "Maria Skłodowska-Curie announces her discovery", title_pl: "Tu nic nie ma Maria Skłodowska-Curie.", description_eng: "Maria Skłodowska-Curie and her husband published a joint paper announcing the existence of an element which they named 'polonium', in honour of her native Poland", description_pl: " ", mmddyyy: "19590712", year_era_id: 1898, month_id: 7, day_id: 11, month_day_id: 193, read_more_eng: "https://en.wikipedia.org/wiki/Marie_Curie", read_more_pl: "https://pl.wikipedia.org/wiki/Maria_Skłodowska-Curie", country_id: poland.id)
-
-  ludmila_birth = Event.create!(title_eng: "Birth of Lyudmila Pavlichenko, world's deadliest sniper ",
-  title_pl: " Urodziny Ludmiły Pawliczenko",
-  description_eng: " Lyudmila Pavlichenko up to this day is regarded as one of the top military snipers of all time and the best and most successful female sniper in history. ",
-  description_pl: "Ludmiła Pawliczenko aż do dzisiaj jest uważana za jedną z najlepszych wojskowych snajperek wszech czasów oraz kobietą-snajperką, która odniosła największe sukcesy. ",
-  mmddyyy: "19160712",
-  year_era_id: 1916 ,
-  month_id: 7,
-  day_id: 12,
-  month_day_id: 194,
-  read_more_eng: "https://www.smithsonianmag.com/history/eleanor-roosevelt-and-the-soviet-sniper-23585278/",
-  read_more_pl: "https://pl.wikipedia.org/wiki/Ludmi%C5%82a_Pawliczenko ",
-  country_id: russia.id )
-
   ludmila_eleanor = Event.create!(title_eng: "Eleanor Roosevelt visits Lyudmila Pavlichenko in Moscow",
   title_pl: " ",
   description_eng: " 15 years after Lyudmila Pavlichenko (world's deadliest and most successful female sniper) toured the US with Eleanor Roosevelt, she was visited by her friend, Eleanor Roosevelt. The unlikely friendship survived politics, distance and time. ",
@@ -611,7 +627,7 @@ picture: "https://miro.medium.com/max/336/1*asyxecdzpQlCnB11ZJ7wPg.jpeg"
   month_id: 9,
   day_id: 9,
   month_day_id: 253,
-  read_more_eng: "https://www.smithsonianmag.com/history/eleanor-roosevelt-and-the-soviet-sniper-23585278/",
+  read_more_eng: "https://smithsonianmag.com/history/eleanor-roosevelt-and-the-soviet-sniper-23585278/",
   read_more_pl: " ",
   country_id: russia.id )
 
@@ -640,7 +656,7 @@ picture: "https://miro.medium.com/max/336/1*asyxecdzpQlCnB11ZJ7wPg.jpeg"
     day_id: 9,
     month_day_id: 191,
     read_more_eng: "https://nzhistory.govt.nz/culture/homosexual-law-reform/homosexual-law-reform",
-    read_more_pl: "https://www.rp.pl/Spoleczenstwo/180409851-Nowa-Zelandia-ustawa-wykresla-wyroki-za-homoseksualizm.html ",
+    read_more_pl: "https://rp.pl/Spoleczenstwo/180409851-Nowa-Zelandia-ustawa-wykresla-wyroki-za-homoseksualizm.html ",
     country_id: nz.id)
 
     focke = Event.create!(
@@ -649,7 +665,7 @@ picture: "https://miro.medium.com/max/336/1*asyxecdzpQlCnB11ZJ7wPg.jpeg"
       description_eng: " She was the first female director of the Bildungswerk Europäische Politik in Cologne (today called the Institute for European Politics - IEP) and a member of European Parliament very committed to improve women’s rights.",
       description_pl: "Była pierwszą kobietą, która została dyrektorką  Bildungswerk Europäische Politik (dziś Instytut Polityki Europejskiej - IEP) i członkinią Parlamentu Europejskiego, która dążyła do polepszenia sytuacji kobiet.  ",
       mmddyyy: "20160710",
-      Year_era_id: 2016  ,
+      year_era_id: 2016  ,
       month_id: 7,
       day_id: 10,
       month_day_id: 192,
@@ -657,22 +673,9 @@ picture: "https://miro.medium.com/max/336/1*asyxecdzpQlCnB11ZJ7wPg.jpeg"
       read_more_pl: " ",
       country_id:  germany.id)
 
-    lee = Event.create!(
-    title_eng: "Harper Lee’s “To Kill a Mockingbird” is published for the first time in the US ",
-    title_pl: " Powieść “Zabić Drozda” Harper Lee zostaje po raz pierwszy wydana w USA",
-    description_eng: "The story written by Harper Lee became one of the most significant books on the topic of racial inequalities and rape also addressing other issues such as classism and gender roles ",
-    description_pl: "Powieść autorstwa Harper Lee stała się jedną z bardziej znaczących książek poruszających temat nierówności rasowych oraz gwałtu, odwołując się również do takich wątków jak klasizm czy role płciowe.",
-    mmddyyy: "19600711",
-    year_era_id: 1960 ,
-    month_id: 7,
-    day_id: 11,
-    month_day_id: 193,
-    read_more_eng: " https://en.wikipedia.org/wiki/To_Kill_a_Mockingbird",
-    read_more_pl: "https://pl.wikipedia.org/wiki/Zabi%C4%87_drozda
-    http://literackie-skarby.blogspot.com/2011/06/rzez-ptakow-spiewajacych-zabic-drozda.html ",
-    country_id: usa.id )
 
-    beah_birth = Event.create!(
+
+    beah = Event.create!(
 title_eng: " Birth of Beah Richards: actress and feminist activist",
 title_pl: " Urodziny Beah Richardss",
 description_eng: "Beah Richards was an american actress, author and poet but, most importantly, an activist. In her most famous poem “A Black Woman Speaks of White Womanhood” she addressed the issue of white womanhood, white supremacy and the idea of multiracial feminism. ",
@@ -682,13 +685,12 @@ year_era_id:  1920,
 month_id: 7,
 day_id: 13,
 month_day_id: 195,
-read_more_eng: "https://www.lipstickalley.com/threads/beah-richards-a-black-woman-speaks-of-white-womanhood-poem.1888842/
- “Beah: A Black Woman Speaks (2003)",
-read_more_pl: " https://pl.wikipedia.org/wiki/Beah_Richards",
+read_more_eng: "https://lipstickalley.com/threads/beah-richards-a-black-woman-speaks-of-white-womanhood-poem.1888842/",
+read_more_pl: "https://pl.wikipedia.org/wiki/Beah_Richards",
 country_id:  usa.id)
 
 rawya = Event.create!(
-title_eng: " Rawya Ateya becomes the first female parliamentarian in the Arab world",
+title_eng: "Rawya Ateya becomes the first female parliamentarian in the Arab world",
 title_pl: "Rawya Ateya zostaje pierwszą kobietą parlamentarzystką w świecie arabskim. ",
 description_eng: " Although Rwaya Ateya was not the only women elected in the first Egyptian elections, her victory was announced before that of Amina Shukri (22 July). Ateya was also the first woman to be commissioned as an officer in the Liberation Army the year before the elections.",
 description_pl: "Pomimo że Rawya Ateya nie była jedyną kobietą wybraną w pierwszych egipskich wyborach parlamentarnych po uchwaleniu nowej konstytucji, jej wygrana została ogłoszna wcześniej niż wygrana Aminy Shukri (22 Lipca). Ateya była również pierwszą kobietą nominowaną na oficera (oficerkę?) w Armii Wyzwolenia w roku poprzedzającym wybory parlamentarne. ",
@@ -701,13 +703,13 @@ read_more_eng: "https://en.wikipedia.org/wiki/Rawya_Ateya ",
 read_more_pl: " ",
 country_id:  egypt.id)
 
-kuras_birth = Event.create!(
+kuras = Event.create!(
 title_eng: "Birth of Ellen Kuras, a cinematographer ",
 title_pl: "Urodziny Ellen Kuras ",
 description_eng: " Ellen Kuras is one of the first women who established an extensive career in cinematography. She’s one of the very few female members of the American Society of Cinematographers.",
 description_pl: "Ellen Kuras jest jedną z pierwszych kobiet, które posiada rozległą kinematograficzną karierę. Jest jedną z niewielu żeńskich członkiń Amerykańskiego Stowarzyszenia Operatorów Filmowych. ",
 mmddyyy: "19590710",
-Year_era_id: 1959  ,
+year_era_id: 1959  ,
 month_id: 7,
 day_id: 10,
 month_day_id: 192,
@@ -772,7 +774,7 @@ month_id: 7,
 day_id: 15,
 month_day_id: 197,
 read_more_eng: "https://en.wikipedia.org/wiki/Emmeline_Pankhurst
-https://www.britannica.com/biography/Emmeline-Pankhurst ",
+https://britannica.com/biography/Emmeline-Pankhurst ",
 read_more_pl: "https://pl.wikipedia.org/wiki/Emmeline_Pankhurst
 http://pokojadwokacki.pl/glosu-kobietom-historia-emmeline-pankhurst-adw-weronika-holowczyc/",
 country_id: uk.id)
@@ -796,23 +798,22 @@ country_id:  usa.id)
 
 
   ################# JOINTS ###############
-  Tsu.create!(type_id: women.id, subscription_id: sylwia_slack.id)
-  Tsu.create!(type_id: queer.id, subscription_id: sylwia_slack.id)
+  # Tsu.create!(type_id: women.id, subscription_id: sylwia_slack.id)
+  # Tsu.create!(type_id: queer.id, subscription_id: sylwia_slack.id)
   Tsu.create!(type_id: queer.id, subscription_id: joel_slack.id)
 
-  Et.create!(event_id: nz_lgbt.id, type: 2)
-  Et.create!(event_id: focke.id, type: 1)
-  Et.create!(event_id: lee.id, type: 1)
-  Et.create!(event_id: beah_birth.id, type: 1)
-  Et.create!(event_id: rawya, type: 1)
-  Et.create!(event_id: kate_gordon, type: 1)
-  Et.create!(event_id: emmeline, type: 1)
+  Et.create!(event_id: nz_lgbt.id, type_id: 2)
+  Et.create!(event_id: focke.id, type_id: 1)
+  Et.create!(event_id: lee.id, type_id: 1)
+  Et.create!(event_id: beah.id, type_id: 1)
+  Et.create!(event_id: rawya.id, type_id: 1)
+  Et.create!(event_id: kate_gordon.id, type_id: 1)
+  Et.create!(event_id: emmeline.id, type_id: 1)
 
-  Et.create!(event_id: vivian, type: 1)
+  Et.create!(event_id: vivian.id, type_id: 1)
 
 
   Et.create!(event_id: kuras.id, type_id: 1)
-  Et.create!(event_id: beah.id, type_id: 1)
   Et.create!(event_id: martina.id, type_id: 1)
   Et.create!(event_id: martina.id, type_id: 2)
 
@@ -825,7 +826,6 @@ country_id:  usa.id)
   Ep.create!(event_id: ludmila_eleanor.id, person_id: ludmila.id)
   Ep.create!(event_id: ludmila_eleanor.id, person_id: eleanor.id)
 
-  Et.create!(event_id: village_vanguard_makeba.id, type_id: 1)
   Ep.create!(event_id: ludmila_birth.id, person_id: ludmila.id)
   Et.create!(event_id: village_vanguard_makeba.id, type_id: 1)
   Ep.create!(event_id: village_vanguard_makeba.id, person_id: miriam.id)
@@ -890,9 +890,9 @@ country_id:  usa.id)
 
   Pp.create!(place_id: stonewall_inn.id, person_id: marsha.id, description_eng: "Marsha P. Johnson has been named, along with Zazu Nova and Jackie Hormona, by a number of the Stonewall veterans as being 'three individuals known to have been in the vanguard' of the pushback against the police at the uprising in 1969.")
 
-  Pp.create!(place_id: stonewall_inn.id, person_id: sylvia.id, description_eng: " ")
+  Pp.create!(place_id: stonewall_inn.id, person_id: sylvia.id, description_eng: "Transactivist Sylvia Rivera threw one of the first bottles in the Stonewall riots.")
 
-  Pp.create!(place_id: stonewall_inn.id, person_id: barbara.id, description_eng: " ")
+  Pp.create!(place_id: stonewall_inn.id, person_id: barbara.id, description_eng: "Barbara Gittings gave multiple speeches here to advocate for gay rights. ")
 
   Pp.create!(place_id: stonewall_inn.id, person_id: storme.id, description_eng: "The 1969 Stonewall uprising reportedly started after Stormé DeLarverie fought back against the police officer who attempted to arrest her.")
 
