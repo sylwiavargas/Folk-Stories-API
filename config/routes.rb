@@ -8,7 +8,7 @@ Rails.application.routes.draw do
      # resources :ets#, only: [:index, :update]
      # resources :cps
      resources :events, only: [:index, :shpw, :update, :create]
-     resources :bios, controller: 'people', only: [:index, :shpw, :update, :create]
+     resources :bios, controller: 'people', only: [:index, :show, :update, :create]
      # resources :subscriptions#, only: [:index, :update]
      # resources :places#, only: [:index, :update]
      # resources :types#, only: [:index, :update]
