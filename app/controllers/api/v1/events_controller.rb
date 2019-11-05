@@ -10,7 +10,7 @@ class Api::V1::EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
-    render json: { event: EventSerializer.new(@event) }, status: :accepted
+    render json: @event, status: :accepted
   end
 
   def create
